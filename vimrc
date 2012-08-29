@@ -11,7 +11,7 @@ Bundle 'tpope/vim-haml'
 Bundle 'vim-scripts/slimv.vim'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'scrooloose/nerdtree'
-Bundle 'vim-scripts/argtextobj'
+Bundle 'vim-scripts/argtextobj.vim'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'Shougo/vimshell.git'
 Bundle 'current-func-info.vim'
@@ -27,7 +27,7 @@ Bundle 'claco/jasmine.vim'
 Bundle 'majutsushi/tagbar'
 Bundle 'gilligan/vim-bebop'
 Bundle 'Shougo/neocomplcache'
-Bundle 'neocomplcache-snippets-complete'
+Bundle 'Shougo/neocomplcache-snippets-complete'
 Bundle 'Shougo/vimproc'
 Bundle 'zeekay/vim-space'
 Bundle 'othree/html5.vim'
@@ -38,9 +38,6 @@ Bundle 'mattn/zencoding-vim'
 Bundle 'spolu/dwm.vim'
 
 filetype plugin on
-
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
 
 " -------------------------------------------------------------------
 "
@@ -80,7 +77,7 @@ map <F3> :TagbarToggle<CR>
 map <F4> :BebopJsEval<CR>
 
 set nofoldenable
-set autochdir
+"set autochdir
 
 if has("gui")
     let g:Powerline_symbols = 'fancy'
@@ -355,4 +352,4 @@ let g:chapa_default_mappings = 1
 
 "source ~/.vim/misc-functions.vim
 "source ~/.vim/snes.vim
-source ~/.vim/neo.vim
+"source ~/.vim/neo.vim
