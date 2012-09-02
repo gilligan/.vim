@@ -44,12 +44,14 @@ Bundle 'jpalardy/vim-slime'
 Bundle 'benmills/vimux.git'
 Bundle 'vim-scripts/Tail-Bundle'
 Bundle 'Rykka/colorv.vim'
+Bundle 'tomasr/molokai.git'
 filetype plugin indent on
 
 "
 " global settings
 "
 " global settings {{{
+let g:molokai_original = 1
 syntax on            " enable syntax highlightning
 set nocp             " no compatible mode
 set ambiwidth=double " display icons correctly
@@ -277,6 +279,7 @@ let g:colorv_preview_ftype="scss,css,html,javascript"
 "
 " misc settings
 "
+" }}}
 " Remove Trailing Whitespace {{{
 func! s:StripTrailingWhitespace()
     normal mZ
