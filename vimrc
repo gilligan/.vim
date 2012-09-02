@@ -40,6 +40,10 @@ Bundle 'juvenn/mustache.vim'
 Bundle 'mattn/zencoding-vim'
 Bundle 'spolu/dwm.vim'
 Bundle 'pangloss/vim-javascript'
+Bundle 'jpalardy/vim-slime'
+Bundle 'benmills/vimux.git'
+Bundle 'vim-scripts/Tail-Bundle'
+Bundle 'Rykka/colorv.vim'
 filetype plugin indent on
 
 "
@@ -166,6 +170,10 @@ autocmd Filetype javascript call MakeSpacelessIabbrev(',',', ')
 let g:complType=1
 let g:bebop_enabled=1
 let g:bebop_enable_js=1
+nmap <Leader>bb :BebopJsEvalBuffer<CR>
+imap <C-b>b <C-o>:BebopJsEvalBuffer<CR>
+nmap <Leader>bl :BebopJsEvalLine<CR>
+imap <C-b>l <C-o>:BebopJsEvalLine<CR>
 " }}}
 " camelcase mappings {{{
 omap <silent> iw <Plug>CamelCaseMotion_iw
@@ -255,6 +263,15 @@ let g:neocomplcache_omni_patterns.c = '\%(\.\|->\)\h\w*'
 let g:neocomplcache_omni_patterns.cpp = '\h\w*\%(\.\|->\)\h\w*\|\h\w*::'" }}}
 " chapa plugin {{{
 let g:chapa_default_mappings = 1
+" }}}
+" vim-slime plugin {{{
+let g:slime_target = "tmux"
+xmap <leader>s <Plug>SlimeRegionSend
+nmap <leader>s <Plug>SlimeParagraphSend
+" }}}
+
+" colorv plugin{{{
+let g:colorv_preview_ftype="scss,css,html,javascript"
 " }}}
 
 "
