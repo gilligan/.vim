@@ -91,6 +91,7 @@ set nohidden
 set autochdir         " change directory to current file working dir
 let g:rct_completion_use_fri = 1
 set noerrorbells visualbell t_vb= " disable annoying bell
+set clipboard=unnamed " clipboard = unnamed reg for easy interaction
 " global settings }}}
 " commands {{{
 " command for reviewing issues
