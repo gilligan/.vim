@@ -41,10 +41,11 @@ Bundle 'mattn/zencoding-vim'
 Bundle 'pangloss/vim-javascript'
 Bundle 'jpalardy/vim-slime'
 Bundle 'benmills/vimux.git'
-Bundle 'vim-scripts/Tail-Bundle'
 Bundle 'Rykka/colorv.vim'
 Bundle 'tomasr/molokai.git'
 Bundle 'epmatsw/ag.vim'
+Bundle 'Conque-Shell'
+Bundle 'tarruda/vim-conque-repl'
 filetype plugin indent on
 
 "
@@ -170,6 +171,9 @@ autocmd Filetype javascript call MakeSpacelessIabbrev(',',', ')
 "
 " plugin settings
 "
+" fugitive plugin {{{
+autocmd QuickFixCmdPost *grep* cwindow
+" }}}
 " bebop plugin {{{
 let g:complType=1
 let g:bebop_enabled=1
