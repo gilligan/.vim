@@ -41,10 +41,11 @@ Bundle 'pangloss/vim-javascript'
 Bundle 'claco/jasmine.vim'
 Bundle 'jpalardy/vim-slime'
 Bundle 'benmills/vimux.git'
-Bundle 'vim-scripts/Tail-Bundle'
 Bundle 'Rykka/colorv.vim'
 Bundle 'tomasr/molokai.git'
-
+Bundle 'epmatsw/ag.vim'
+Bundle 'Conque-Shell'
+Bundle 'tarruda/vim-conque-repl'
 filetype plugin indent on
 
 "
@@ -90,6 +91,8 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip " ignore patterns for completion
 set nohidden
 set autochdir         " change directory to current file working dir
 let g:rct_completion_use_fri = 1
+set noerrorbells visualbell t_vb= " disable annoying bell
+set clipboard=unnamed " clipboard = unnamed reg for easy interaction
 " global settings }}}
 " commands {{{
 " command for reviewing issues
@@ -168,6 +171,9 @@ autocmd Filetype javascript call MakeSpacelessIabbrev(',',', ')
 "
 " plugin settings
 "
+" fugitive plugin {{{
+autocmd QuickFixCmdPost *grep* cwindow
+" }}}
 " bebop plugin {{{
 let g:complType=1
 let g:bebop_enabled=1
@@ -326,6 +332,8 @@ autocmd BufWinLeave javascript call clearmatches()
 " show whitespace characters in gui {{{
 if has ('gui_running')
     set listchars=tab:▸\ ,eol:¬,extends:❯,precedes:❮
+    set background=dark
+    colorscheme moria
 endif
 " }}}
 " vim: fdm=marker foldlevel=1 nofoldenable
