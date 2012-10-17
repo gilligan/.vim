@@ -27,7 +27,6 @@ Bundle 'vim-scripts/SingleCompile'
 Bundle 'sjl/threesome.vim'
 Bundle 'scrooloose/syntastic'
 Bundle 'majutsushi/tagbar'
-Bundle 'gilligan/vim-bebop'
 Bundle 'Shougo/neocomplcache'
 Bundle 'Shougo/neocomplcache-snippets-complete'
 Bundle 'Shougo/vimproc'
@@ -47,6 +46,11 @@ Bundle 'epmatsw/ag.vim'
 Bundle 'Conque-Shell'
 Bundle 'tarruda/vim-conque-repl'
 filetype plugin indent on
+
+
+" fix neocomplcache behavior
+" with arrow keys
+let g:neocomplcache_enable_insert_char_pre=1
 
 "
 " global settings
@@ -94,10 +98,14 @@ let g:rct_completion_use_fri = 1
 set noerrorbells visualbell t_vb= " disable annoying bell
 set clipboard=unnamed " clipboard = unnamed reg for easy interaction
 " global settings }}}
+
+
 " commands {{{
 " command for reviewing issues
 command! -nargs=1 ReviewTicket :Glog --grep=<args> --
 " }}}
+
+
 " general mappings {{{
 map <F2> :NERDTreeToggle<CR>
 map <F3> :TagbarToggle<CR>
@@ -136,14 +144,17 @@ map <C-J> <C-W>j<C-W>_
 map <C-K> <C-W>k<C-W>_
 " list lines containing word under cursor
 map ,l [I:let nr = input("select: ")<Bar>exe "normal " . nr ."[\t"<CR>
-imap <C-k> <Plug>(neocomplcache_snippets_expand)
 " general mappings }}}
+
+
 " buffer commands {{{
 autocmd BufReadPost *
             \ if line("'\"") > 0 && line("'\"") <= line("$") |
             \   exe "normal g`\"" |
             \ endif
 " }}}
+
+
 " font settings {{{
 if has("gui")
     let g:Powerline_symbols = 'fancy'
@@ -153,6 +164,8 @@ if has("gui")
         set guifont=Inconsolata-dz\ for\ Powerline\ Medium\ 10
     endif
 endif
+
+
 " }}}
 " abbrevations {{{
 function! EatChar(pat)
@@ -171,18 +184,20 @@ autocmd Filetype javascript call MakeSpacelessIabbrev(',',', ')
 "
 " plugin settings
 "
-" fugitive plugin {{{
+
+"surround plugin {{{
+nmap \' ysiw'
+nmap \" ysiw"
+nmap \[ ysiw[
+nmap \( ysiw(
+nmap \< ysiw<
+"}}}
+
+"fugitive plugin {{{
 autocmd QuickFixCmdPost *grep* cwindow
 " }}}
-" bebop plugin {{{
-let g:complType=1
-let g:bebop_enabled=1
-let g:bebop_enable_js=1
-nmap <Leader>bb :BebopJsEvalBuffer<CR>
-imap <C-b>b <C-o>:BebopJsEvalBuffer<CR>
-nmap <Leader>bl :BebopJsEvalLine<CR>
-imap <C-b>l <C-o>:BebopJsEvalLine<CR>
-" }}}
+
+
 " camelcase mappings {{{
 omap <silent> iw <Plug>CamelCaseMotion_iw
 xmap <silent> iw <Plug>CamelCaseMotion_iw
@@ -191,6 +206,7 @@ xmap <silent> ib <Plug>CamelCaseMotion_ib
 omap <silent> ie <Plug>CamelCaseMotion_ie
 xmap <silent> ie <Plug>CamelCaseMotion_ie
 " }}}
+
 " solarized plugin {{{
 if has("gui_running")
     let g:solarized_contrast="high"    "default value is normal
@@ -201,10 +217,14 @@ if has("gui_running")
     colorscheme solarized
 endif
 " }}}
+
+
 " syntastic plugin {{{
 "
 let g:syntastic_javascript_checker="jshint"
 " }}}
+
+
 " slimv settings {{{
 "
 let g:slimv_keybindings=1
@@ -213,6 +233,8 @@ let g:slimv_impl='sbcl'
 let g:slimv_ctags='/usr/local/bin/ctags'
 let g:lisp_rainbow=1
 " }}}
+
+
 " ctrlp setings {{{
 let g:ctrlp_working_path_mode = 2
 let g:ctrlp_root_markers = ['.git','.project_root']
@@ -223,17 +245,17 @@ let g:ctrlp_custom_ignore = {
   \ 'file': '\.exe$\|\.so$\|\.dll$|\.dylib$',
   \ }
 " }}}
+
+
 " neocmplcache settings {{{
-" Disable AutoComplPop.
-let g:acp_enableAtStartup = 0
 " Use neocomplcache.
 let g:neocomplcache_enable_at_startup = 1
+" AutoComplPop like behavior.
+let g:neocomplcache_enable_auto_select = 1
 " Use smartcase.
 let g:neocomplcache_enable_smart_case = 1
 " Use camel case completion.
 let g:neocomplcache_enable_camel_case_completion = 1
-" Use underbar completion.
-let g:neocomplcache_enable_underbar_completion = 1
 " Set minimum syntax keyword length.
 let g:neocomplcache_min_syntax_length = 4
 
@@ -243,26 +265,12 @@ if !exists('g:neocomplcache_keyword_patterns')
 endif
 let g:neocomplcache_keyword_patterns['default'] = '\h\w*'
 
-" Plugin key-mappings.
 imap <C-k>     <Plug>(neocomplcache_snippets_expand)
-smap <C-k>     <Plug>(neocomplcache_snippets_expand)
 inoremap <expr><C-g>     neocomplcache#undo_completion()
 inoremap <expr><C-l>     neocomplcache#complete_common_string()
-
-" Recommended key-mappings.
-" <CR>: close popup and save indent.
-inoremap <expr><CR>  neocomplcache#smart_close_popup() . "\<CR>"
-" <TAB>: completion.
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
-" <C-h>, <BS>: close popup and delete backword char.
-inoremap <expr><C-h> neocomplcache#smart_close_popup()."\<C-h>"
-inoremap <expr><BS> neocomplcache#smart_close_popup()."\<C-h>"
-inoremap <expr><C-y>  neocomplcache#close_popup()
 inoremap <expr><C-]> neocomplcache#close_popup()
 inoremap <expr><C-e>  neocomplcache#cancel_popup()
-
-" AutoComplPop like behavior.
-let g:neocomplcache_enable_auto_select = 1
 
 " Enable omni completion.
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
@@ -274,14 +282,18 @@ autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 if !exists('g:neocomplcache_omni_patterns')
   let g:neocomplcache_omni_patterns = {}
 endif
-
 let g:neocomplcache_omni_patterns.ruby = '[^. *\t]\.\w*\|\h\w*::'
 let g:neocomplcache_omni_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
 let g:neocomplcache_omni_patterns.c = '\%(\.\|->\)\h\w*'
-let g:neocomplcache_omni_patterns.cpp = '\h\w*\%(\.\|->\)\h\w*\|\h\w*::'" }}}
+let g:neocomplcache_omni_patterns.cpp = '\h\w*\%(\.\|->\)\h\w*\|\h\w*::'
+" }}}
+
+
 " chapa plugin {{{
 let g:chapa_default_mappings = 1
 " }}}
+
+
 " vim-slime plugin {{{
 let g:slime_target = "tmux"
 xmap <leader>s <Plug>SlimeRegionSend
@@ -295,7 +307,7 @@ let g:colorv_preview_ftype="scss,css,html,javascript"
 "
 " misc settings
 "
-" }}}
+
 " Remove Trailing Whitespace {{{
 func! s:StripTrailingWhitespace()
     normal mZ
@@ -304,6 +316,8 @@ func! s:StripTrailingWhitespace()
 endf
 au FileType * au BufWritePre <buffer> :silent! call <SID>StripTrailingWhitespace()`
 " }}}
+
+
 " completion settings {{{
 au FileType python setlocal omnifunc=pythoncomplete#Complete
 au FileType javascript,coffee setlocal omnifunc=javascriptcomplete#CompleteJS
@@ -312,9 +326,12 @@ au FileType css setlocal omnifunc=csscomplete#CompleteCSS
 au FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 au FileType ruby,eruby setlocal omnifunc=rubycomplete#Complete
 " }}}
+
 " resize splits when window is resized {{{
 au VimResized * exe "normal! \<c-w>="
 " }}}
+
+
 " javascript settings/ whitespace fixes {{{
 func! s:FixFunctionDecl()
     normal mZ
@@ -329,6 +346,8 @@ autocmd InsertEnter javascript match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd InsertLeave javascript match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave javascript call clearmatches()
 " }}}
+
+
 " show whitespace characters in gui {{{
 if has ('gui_running')
     set listchars=tab:▸\ ,eol:¬,extends:❯,precedes:❮
@@ -336,4 +355,6 @@ if has ('gui_running')
     colorscheme moria
 endif
 " }}}
+
+
 " vim: fdm=marker foldlevel=1 nofoldenable
