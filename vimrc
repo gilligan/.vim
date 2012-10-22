@@ -28,7 +28,7 @@ Bundle 'sjl/threesome.vim'
 Bundle 'scrooloose/syntastic'
 Bundle 'majutsushi/tagbar'
 Bundle 'Shougo/neocomplcache'
-Bundle 'Shougo/neocomplcache-snippets-complete'
+Bundle 'Shougo/neosnippet'
 Bundle 'Shougo/vimproc'
 Bundle 'zeekay/vim-space'
 Bundle 'othree/html5.vim'
@@ -286,6 +286,11 @@ let g:neocomplcache_omni_patterns.ruby = '[^. *\t]\.\w*\|\h\w*::'
 let g:neocomplcache_omni_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
 let g:neocomplcache_omni_patterns.c = '\%(\.\|->\)\h\w*'
 let g:neocomplcache_omni_patterns.cpp = '\h\w*\%(\.\|->\)\h\w*\|\h\w*::'
+" }}}
+
+
+" neosnippet plugin {{{
+let g:neosnippet#snippets_directory="~/.vim/snippets"
 " }}}
 
 
