@@ -45,6 +45,7 @@ Bundle 'tomasr/molokai.git'
 Bundle 'epmatsw/ag.vim'
 Bundle 'Conque-Shell'
 Bundle 'tarruda/vim-conque-repl'
+Bundle 'michaeljsmith/vim-indent-object'
 filetype plugin indent on
 
 
@@ -126,7 +127,7 @@ map <C-Down> <C-W>j<C-W>_
 map <C-Left> <C-W>h<C-W>_
 map <C-Right> <C-W>l<C-W>_
 " paste clipboard contents
-map ,p "*p
+map ,p "+p
 " snes help mappings:
 nmap  ,fr :execute 'help ' . expand('<cword>')<CR>
 nmap  ,q  :bd<CR>
@@ -144,6 +145,7 @@ map <C-J> <C-W>j<C-W>_
 map <C-K> <C-W>k<C-W>_
 " list lines containing word under cursor
 map ,l [I:let nr = input("select: ")<Bar>exe "normal " . nr ."[\t"<CR>
+map ,L :execute ":%s@\\<" . expand("<cword>") . "\\>\@&@gn"<CR>
 " general mappings }}}
 
 
