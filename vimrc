@@ -96,8 +96,9 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip " ignore patterns for completion
 set nohidden
 set autochdir         " change directory to current file working dir
 let g:rct_completion_use_fri = 1
-set noerrorbells visualbell t_vb= " disable annoying bell
 set clipboard=unnamed " clipboard = unnamed reg for easy interaction
+set noerrorbells visualbell t_vb=
+autocmd GUIEnter * set visualbell t_vb=
 " global settings }}}
 
 
@@ -209,16 +210,6 @@ omap <silent> ie <Plug>CamelCaseMotion_ie
 xmap <silent> ie <Plug>CamelCaseMotion_ie
 " }}}
 
-" solarized plugin {{{
-if has("gui_running")
-    let g:solarized_contrast="high"    "default value is normal
-    let g:solarized_visibility="high"    "default value is normal
-    let g:solarized_diffmode="high"    "default value is normal
-    let g:solarized_hitrail=1    "default value is 0
-    set background=light
-    colorscheme solarized
-endif
-" }}}
 
 
 " syntastic plugin {{{
@@ -358,8 +349,6 @@ autocmd BufWinLeave javascript call clearmatches()
 " show whitespace characters in gui {{{
 if has ('gui_running')
     set listchars=tab:▸\ ,eol:¬,extends:❯,precedes:❮
-    set background=dark
-    colorscheme moria
 endif
 " }}}
 
