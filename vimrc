@@ -47,6 +47,7 @@ Bundle 'Conque-Shell'
 Bundle 'tarruda/vim-conque-repl'
 Bundle 'michaeljsmith/vim-indent-object'
 Bundle 'vim-scripts/matchit.zip'
+Bundle 'sjl/splice.vim.git'
 filetype plugin indent on
 
 
