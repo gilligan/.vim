@@ -46,6 +46,7 @@ Bundle 'epmatsw/ag.vim'
 Bundle 'Conque-Shell'
 Bundle 'tarruda/vim-conque-repl'
 Bundle 'michaeljsmith/vim-indent-object'
+Bundle 'vim-scripts/matchit.zip'
 filetype plugin indent on
 
 
@@ -147,6 +148,8 @@ map <C-K> <C-W>k<C-W>_
 " list lines containing word under cursor
 map ,l [I:let nr = input("select: ")<Bar>exe "normal " . nr ."[\t"<CR>
 map ,L :execute ":%s@\\<" . expand("<cword>") . "\\>\@&@gn"<CR>
+" change word with previously yanked text
+noremap S diw"0P
 " general mappings }}}
 
 
@@ -180,8 +183,8 @@ function! MakeSpacelessIabbrev(from, to)
     execute "iabbrev <silent> ".a:from." ".a:to."<C-R>=EatChar('\\s')<CR>"
 endfunction
 
-autocmd Filetype javascript call MakeSpacelessIabbrev('function(', 'function (')
-autocmd Filetype javascript call MakeSpacelessIabbrev(',',', ')
+"autocmd Filetype javascript call MakeSpacelessIabbrev('function(', 'function (')
+"autocmd Filetype javascript call MakeSpacelessIabbrev(',',', ')
 " }}}
 
 "
@@ -331,12 +334,12 @@ au VimResized * exe "normal! \<c-w>="
 
 
 " javascript settings/ whitespace fixes {{{
-func! s:FixFunctionDecl()
-    normal mZ
-    %s/\ function(/function\ (/e
-    normal `Z
-endf
-au FileType javascript au BufWritePre <buffer> :silent! call <SID>FixFunctionDecl()`
+"func! s:FixFunctionDecl()
+    "normal mZ
+    "%s/\ function(/function\ (/e
+    "normal `Z
+"endf
+"au FileType javascript au BufWritePre <buffer> :silent! call <SID>FixFunctionDecl()`
 highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
 autocmd BufWinEnter javascript match ExtraWhitespace /\s\+$/
