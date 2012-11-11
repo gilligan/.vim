@@ -49,6 +49,7 @@ Bundle 'michaeljsmith/vim-indent-object'
 Bundle 'vim-scripts/matchit.zip'
 Bundle 'sjl/splice.vim.git'
 Bundle 'gregsexton/gitv.git'
+Bundle 'nathanaelkane/vim-indent-guides'
 filetype plugin indent on
 
 
@@ -102,6 +103,7 @@ let g:rct_completion_use_fri = 1
 set clipboard=unnamed " clipboard = unnamed reg for easy interaction
 set noerrorbells visualbell t_vb=
 autocmd GUIEnter * set visualbell t_vb=
+colo editplus
 " global settings }}}
 
 
@@ -199,6 +201,24 @@ nmap \" ysiw"
 nmap \[ ysiw[
 nmap \( ysiw(
 nmap \< ysiw<
+"}}}
+
+
+"indent-guides plugin {{{
+let g:indent_guides_enable_on_vim_startup=1
+let g:indent_guides_auto_colors=1
+let g:indent_guides_start_level=2
+let g:indent_guides_guide_size=1
+
+fun! ToggleIndentGuideLines()
+    echo 'toggle guidelines'
+    if &ft =~ 'ruby\|python\|javascript'
+        exe 'IndentGuidesEnable'
+    else
+        exe 'IndentGuidesDisable'
+    endif
+endfunc
+autocmd BufReadPost * call ToggleIndentGuideLines()
 "}}}
 
 "fugitive plugin {{{
