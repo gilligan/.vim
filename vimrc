@@ -154,6 +154,8 @@ map ,l [I:let nr = input("select: ")<Bar>exe "normal " . nr ."[\t"<CR>
 map ,L :execute ":%s@\\<" . expand("<cword>") . "\\>\@&@gn"<CR>
 " change word with previously yanked text
 noremap S diw"0P
+" jump to end of current {} block
+imap <C-j> <C-o>:normal ]}$<CR>
 " general mappings }}}
 
 
