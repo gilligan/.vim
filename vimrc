@@ -49,8 +49,11 @@ Bundle 'michaeljsmith/vim-indent-object'
 Bundle 'vim-scripts/matchit.zip'
 Bundle 'sjl/splice.vim.git'
 Bundle 'gregsexton/gitv.git'
-Bundle 'nathanaelkane/vim-indent-guides'
+Bundle 'gilligan/vim-bebop'
+Bundle 'vim-scripts/delimitMate.vim.git'
+Bundle 'vim-scripts/YankRing.vim'
 filetype plugin indent on
+
 
 
 " fix neocomplcache behavior
@@ -206,23 +209,6 @@ nmap \< ysiw<
 "}}}
 
 
-"indent-guides plugin {{{
-let g:indent_guides_enable_on_vim_startup=1
-let g:indent_guides_auto_colors=1
-let g:indent_guides_start_level=2
-let g:indent_guides_guide_size=1
-
-fun! ToggleIndentGuideLines()
-    echo 'toggle guidelines'
-    if &ft =~ 'ruby\|python\|javascript'
-        exe 'IndentGuidesEnable'
-    else
-        exe 'IndentGuidesDisable'
-    endif
-endfunc
-autocmd BufReadPost * call ToggleIndentGuideLines()
-"}}}
-
 "fugitive plugin {{{
 autocmd QuickFixCmdPost *grep* cwindow
 " }}}
@@ -327,6 +313,11 @@ nmap <leader>s <Plug>SlimeParagraphSend
 
 " colorv plugin{{{
 let g:colorv_preview_ftype="scss,css,html,javascript"
+" }}}
+
+" yankring plugin {{{
+let g:yankring_replace_n_pkey = '\p'
+let g:yankring_replace_n_nkey = '\P'
 " }}}
 
 "
