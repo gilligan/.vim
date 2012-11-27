@@ -1,0 +1,36 @@
+snippet defun
+	(defun ${1:name} (${2:args})
+		${3:code})
+
+snippet let
+	(let ((${1:name} ${2:declaration}))
+		${3:body})
+
+snippet flet
+	(flet ((${1:name} (${2:args}) ${3:body}))
+		${4:body})
+
+snippet defparamameter
+	(defparameter ${1:name} ${2:declaration})
+
+snippet defvar
+	(defvar ${1:name} ${2:declaration})
+
+# Conditionals
+
+snippet if
+	(if ${1:conditional} ${2:true} ${3:false})
+
+snippet when
+	(when ${1:conditional} ${2:true})
+
+snippet unless
+	(unless ${1:conditional} ${2:false})
+
+snippet case
+	(case ${1:target}
+		((${2:possibility}) ${3:body})
+		(otherwise ${4:else}))
+
+snippet lambda
+	(lambda (${1:args}) ${2:body})
