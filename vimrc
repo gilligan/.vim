@@ -16,7 +16,6 @@ Bundle 'vim-scripts/slimv.vim'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'scrooloose/nerdtree'
 Bundle 'vim-scripts/argtextobj.vim'
-Bundle 'Lokaltog/vim-easymotion'
 Bundle 'Shougo/vimshell.git'
 Bundle 'current-func-info.vim'
 Bundle 'kien/ctrlp.vim'
@@ -50,7 +49,6 @@ Bundle 'vim-scripts/matchit.zip'
 Bundle 'sjl/splice.vim.git'
 Bundle 'gregsexton/gitv.git'
 Bundle 'gilligan/vim-bebop'
-Bundle 'vim-scripts/delimitMate.vim.git'
 Bundle 'vim-scripts/YankRing.vim'
 filetype plugin indent on
 
@@ -107,6 +105,28 @@ set clipboard=unnamed " clipboard = unnamed reg for easy interaction
 set noerrorbells visualbell t_vb=
 autocmd GUIEnter * set visualbell t_vb=
 colo editplus
+
+" Use Q to intelligently close a window
+" (if there are multiple windows into the same buffer)
+" or kill the buffer entirely if it's the last window looking into that buffer
+function! CloseWindowOrKillBuffer()
+  let number_of_windows_to_this_buffer = len(filter(range(1, winnr('$')), "winbufnr(v:val) == bufnr('%')"))
+
+  " We should never bdelete a nerd tree
+  if matchstr(expand("%"), 'NERD') == 'NERD'
+    wincmd c
+    return
+  endif
+
+  if number_of_windows_to_this_buffer > 1
+    wincmd c
+  else
+    bdelete
+  endif
+endfunction
+
+nnoremap <silent> Q :call CloseWindowOrKillBuffer()<CR>
+
 " global settings }}}
 
 
@@ -159,6 +179,17 @@ map ,L :execute ":%s@\\<" . expand("<cword>") . "\\>\@&@gn"<CR>
 noremap S diw"0P
 " jump to end of current {} block
 imap <C-j> <C-o>:normal ]}$<CR>
+" overwrite current word with yank buffer
+nnoremap ,ow "_diwhp
+" add semicolon to end of line
+nnoremap ;; A;<esc>
+" go to last edit location
+nnoremap ,. '.
+" paste current file name to clipboard
+nnoremap <silent> ,cf :let @* = expand("%:~")<CR>
+nnoremap <silent> ,cn :let @* = expand("%:t")<CR>
+
+noremap ,hl :set hlsearch! hlsearch?<CR>
 " general mappings }}}
 
 
@@ -228,6 +259,14 @@ xmap <silent> ie <Plug>CamelCaseMotion_ie
 " syntastic plugin {{{
 "
 let g:syntastic_javascript_checker="jshint"
+"mark syntax errors with :signs
+let g:syntastic_enable_signs=1
+"automatically jump to the error when saving the file
+let g:syntastic_auto_jump=0
+"show the error list automatically
+let g:syntastic_auto_loc_list=1
+"don't care about warnings
+let g:syntastic_quiet_warnings=0
 " }}}
 
 
@@ -254,22 +293,17 @@ let g:ctrlp_custom_ignore = {
 
 
 " neocmplcache settings {{{
+
 " Use neocomplcache.
 let g:neocomplcache_enable_at_startup = 1
 " AutoComplPop like behavior.
-let g:neocomplcache_enable_auto_select = 1
+let g:neocomplcache_enable_auto_select = 0
 " Use smartcase.
 let g:neocomplcache_enable_smart_case = 1
 " Use camel case completion.
 let g:neocomplcache_enable_camel_case_completion = 1
 " Set minimum syntax keyword length.
 let g:neocomplcache_min_syntax_length = 4
-
-" Define keyword.
-if !exists('g:neocomplcache_keyword_patterns')
-  let g:neocomplcache_keyword_patterns = {}
-endif
-let g:neocomplcache_keyword_patterns['default'] = '\h\w*'
 
 imap <C-space>     <Plug>(neocomplcache_snippets_expand)
 inoremap <expr><C-g>     neocomplcache#undo_completion()
@@ -288,6 +322,7 @@ autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 if !exists('g:neocomplcache_omni_patterns')
   let g:neocomplcache_omni_patterns = {}
 endif
+let g:neocomplcache_keyword_patterns['default'] = '\h\w*'
 let g:neocomplcache_omni_patterns.ruby = '[^. *\t]\.\w*\|\h\w*::'
 let g:neocomplcache_omni_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
 let g:neocomplcache_omni_patterns.c = '\%(\.\|->\)\h\w*'
