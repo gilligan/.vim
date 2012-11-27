@@ -50,6 +50,7 @@ Bundle 'vim-scripts/matchit.zip'
 Bundle 'sjl/splice.vim.git'
 Bundle 'gregsexton/gitv.git'
 Bundle 'nathanaelkane/vim-indent-guides'
+Bundle 'gilligan/vim-bebop'
 filetype plugin indent on
 
 
@@ -212,15 +213,15 @@ let g:indent_guides_auto_colors=1
 let g:indent_guides_start_level=2
 let g:indent_guides_guide_size=1
 
-fun! ToggleIndentGuideLines()
-    echo 'toggle guidelines'
-    if &ft =~ 'ruby\|python\|javascript'
-        exe 'IndentGuidesEnable'
-    else
-        exe 'IndentGuidesDisable'
-    endif
-endfunc
-autocmd BufReadPost * call ToggleIndentGuideLines()
+"fun! ToggleIndentGuideLines()
+    "echo 'toggle guidelines'
+    "if &ft =~ 'ruby\|python\|javascript'
+        "exe 'IndentGuidesEnable'
+    "else
+        "exe 'IndentGuidesDisable'
+    "endif
+"endfunc
+"autocmd BufReadPost * call ToggleIndentGuideLines()
 "}}}
 
 "fugitive plugin {{{
