@@ -52,7 +52,7 @@ Bundle 'gilligan/vim-bebop'
 Bundle 'vim-scripts/YankRing.vim'
 Bundle 'kshenoy/vim-signature'
 Bundle 'kana/vim-textobj-line'
-Bundle 'kana/vim-textobj-entire.git'
+Bundle 'kana/vim-textobj-entire'
 filetype plugin indent on
 
 
