@@ -50,6 +50,9 @@ Bundle 'sjl/splice.vim.git'
 Bundle 'gregsexton/gitv.git'
 Bundle 'gilligan/vim-bebop'
 Bundle 'vim-scripts/YankRing.vim'
+Bundle 'kshenoy/vim-signature'
+Bundle 'kana/vim-textobj-line'
+Bundle 'kana/vim-textobj-entire.git'
 filetype plugin indent on
 
 
