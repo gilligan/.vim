@@ -192,8 +192,13 @@ nnoremap ,. '.
 " paste current file name to clipboard
 nnoremap <silent> ,cf :let @* = expand("%:~")<CR>
 nnoremap <silent> ,cn :let @* = expand("%:t")<CR>
-
 noremap ,hl :set hlsearch! hlsearch?<CR>
+
+"happy-hacking-esque insert mode movement
+imap <C-j> <Down>
+imap <C-k> <Up>
+imap <C-h> <Left>
+imap <C-l> <Right>
 " general mappings }}}
 
 
@@ -311,6 +316,11 @@ let g:ctrlp_custom_ignore = {
 
 " neocmplcache settings {{{
 
+inoremap <expr><C-h> neocomplcache#close_popup() . "\<Left>"
+inoremap <expr><C-l> neocomplcache#close_popup() . "\<Right>"
+inoremap <expr><C-k> neocomplcache#close_popup() . "\<Up>"
+inoremap <expr><C-j> neocomplcache#close_popup() . "\<Down>"
+
 " Use neocomplcache.
 let g:neocomplcache_enable_at_startup = 1
 " AutoComplPop like behavior.
@@ -324,7 +334,7 @@ let g:neocomplcache_min_syntax_length = 4
 
 "imap <C-space>     <Plug>(neocomplcache_snippets_expand)
 inoremap <expr><C-g>     neocomplcache#undo_completion()
-inoremap <expr><C-l>     neocomplcache#complete_common_string()
+"inoremap <expr><C-l>     neocomplcache#complete_common_string()
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 inoremap <expr><C-]> neocomplcache#close_popup()
 inoremap <expr><C-e>  neocomplcache#cancel_popup()
