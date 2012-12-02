@@ -51,8 +51,9 @@ Bundle 'gregsexton/gitv.git'
 Bundle 'gilligan/vim-bebop'
 Bundle 'vim-scripts/YankRing.vim'
 Bundle 'kshenoy/vim-signature'
-Bundle 'kana/vim-textobj-line'
-Bundle 'kana/vim-textobj-entire'
+Bundle 'vim-scripts/textobj-user'
+Bundle 'vim-scripts/textobj-entire'
+Bundle 'vim-scripts/textobj-line'
 filetype plugin indent on
 
 
@@ -249,12 +250,12 @@ autocmd QuickFixCmdPost *grep* cwindow
 
 
 " camelcase mappings {{{
-omap <silent> iw <Plug>CamelCaseMotion_iw
-xmap <silent> iw <Plug>CamelCaseMotion_iw
-omap <silent> ib <Plug>CamelCaseMotion_ib
-xmap <silent> ib <Plug>CamelCaseMotion_ib
-omap <silent> ie <Plug>CamelCaseMotion_ie
-xmap <silent> ie <Plug>CamelCaseMotion_ie
+"omap <silent> iw <Plug>CamelCaseMotion_iw
+"xmap <silent> iw <Plug>CamelCaseMotion_iw
+"omap <silent> ib <Plug>CamelCaseMotion_ib
+"xmap <silent> ib <Plug>CamelCaseMotion_ib
+"omap <silent> ie <Plug>CamelCaseMotion_ie
+"xmap <silent> ie <Plug>CamelCaseMotion_ie
 " }}}
 
 
