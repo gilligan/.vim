@@ -50,6 +50,10 @@ Bundle 'sjl/splice.vim.git'
 Bundle 'gregsexton/gitv.git'
 Bundle 'gilligan/vim-bebop'
 Bundle 'vim-scripts/YankRing.vim'
+Bundle 'kshenoy/vim-signature'
+Bundle 'vim-scripts/textobj-user'
+Bundle 'vim-scripts/textobj-entire'
+Bundle 'vim-scripts/textobj-line'
 filetype plugin indent on
 
 
@@ -188,8 +192,13 @@ nnoremap ,. '.
 " paste current file name to clipboard
 nnoremap <silent> ,cf :let @* = expand("%:~")<CR>
 nnoremap <silent> ,cn :let @* = expand("%:t")<CR>
-
 noremap ,hl :set hlsearch! hlsearch?<CR>
+
+"happy-hacking-esque insert mode movement
+imap <C-j> <Down>
+imap <C-k> <Up>
+imap <C-h> <Left>
+imap <C-l> <Right>
 " general mappings }}}
 
 
@@ -246,12 +255,12 @@ autocmd QuickFixCmdPost *grep* cwindow
 
 
 " camelcase mappings {{{
-omap <silent> iw <Plug>CamelCaseMotion_iw
-xmap <silent> iw <Plug>CamelCaseMotion_iw
-omap <silent> ib <Plug>CamelCaseMotion_ib
-xmap <silent> ib <Plug>CamelCaseMotion_ib
-omap <silent> ie <Plug>CamelCaseMotion_ie
-xmap <silent> ie <Plug>CamelCaseMotion_ie
+"omap <silent> iw <Plug>CamelCaseMotion_iw
+"xmap <silent> iw <Plug>CamelCaseMotion_iw
+"omap <silent> ib <Plug>CamelCaseMotion_ib
+"xmap <silent> ib <Plug>CamelCaseMotion_ib
+"omap <silent> ie <Plug>CamelCaseMotion_ie
+"xmap <silent> ie <Plug>CamelCaseMotion_ie
 " }}}
 
 
@@ -292,7 +301,25 @@ let g:ctrlp_custom_ignore = {
 " }}}
 
 
+" neosnippet settings {{{
+	" Plugin key-mappings.
+	imap <C-space>     <Plug>(neosnippet_expand_or_jump)
+	smap <C-space>     <Plug>(neosnippet_expand_or_jump)
+	xmap <C-space>     <Plug>(neosnippet_expand_target)
+
+	" For snippet_complete marker.
+	if has('conceal')
+	  set conceallevel=2 concealcursor=i
+	endif
+" }}}
+
+
 " neocmplcache settings {{{
+
+inoremap <expr><C-h> neocomplcache#close_popup() . "\<Left>"
+inoremap <expr><C-l> neocomplcache#close_popup() . "\<Right>"
+inoremap <expr><C-k> neocomplcache#close_popup() . "\<Up>"
+inoremap <expr><C-j> neocomplcache#close_popup() . "\<Down>"
 
 " Use neocomplcache.
 let g:neocomplcache_enable_at_startup = 1
@@ -305,9 +332,9 @@ let g:neocomplcache_enable_camel_case_completion = 1
 " Set minimum syntax keyword length.
 let g:neocomplcache_min_syntax_length = 4
 
-imap <C-space>     <Plug>(neocomplcache_snippets_expand)
+"imap <C-space>     <Plug>(neocomplcache_snippets_expand)
 inoremap <expr><C-g>     neocomplcache#undo_completion()
-inoremap <expr><C-l>     neocomplcache#complete_common_string()
+"inoremap <expr><C-l>     neocomplcache#complete_common_string()
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 inoremap <expr><C-]> neocomplcache#close_popup()
 inoremap <expr><C-e>  neocomplcache#cancel_popup()
@@ -322,7 +349,7 @@ autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 if !exists('g:neocomplcache_omni_patterns')
   let g:neocomplcache_omni_patterns = {}
 endif
-let g:neocomplcache_keyword_patterns['default'] = '\h\w*'
+let g:neocomplcache_omni_patterns['default'] = '\h\w*'
 let g:neocomplcache_omni_patterns.ruby = '[^. *\t]\.\w*\|\h\w*::'
 let g:neocomplcache_omni_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
 let g:neocomplcache_omni_patterns.c = '\%(\.\|->\)\h\w*'
