@@ -48,7 +48,7 @@ Bundle 'michaeljsmith/vim-indent-object'
 Bundle 'vim-scripts/matchit.zip'
 Bundle 'sjl/splice.vim.git'
 Bundle 'gregsexton/gitv.git'
-Bundle 'gilligan/vim-bebop'
+"Bundle 'gilligan/vim-bebop'
 Bundle 'vim-scripts/YankRing.vim'
 Bundle 'kshenoy/vim-signature'
 Bundle 'vim-scripts/textobj-user'
@@ -142,6 +142,7 @@ command! -nargs=1 ReviewTicket :Glog --grep=<args> --
 
 " general mappings {{{
 map <F2> :NERDTreeToggle<CR>
+map <S-F2> :NERDTreeFind<CR>
 map <F3> :TagbarToggle<CR>
 map <F4> :BebopJsEval<CR>
 nmap <F9> :SCCompile<cr>
@@ -193,6 +194,12 @@ nnoremap ,. '.
 nnoremap <silent> ,cf :let @* = expand("%:~")<CR>
 nnoremap <silent> ,cn :let @* = expand("%:t")<CR>
 noremap ,hl :set hlsearch! hlsearch?<CR>
+
+" select current javascript function
+vmap jf :normal va{oF(b<CR>
+" select current javascript function including
+" possible name preceding the function statement
+vmap jF :normal va{oF(b^<CR>
 
 "happy-hacking-esque insert mode movement
 imap <C-j> <Down>
