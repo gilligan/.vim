@@ -12,6 +12,7 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-unimpaired'
 Bundle 'tpope/vim-haml'
+Bundle 'tpope/vim-endwise'
 Bundle 'vim-scripts/slimv.vim'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'scrooloose/nerdtree'
@@ -48,15 +49,20 @@ Bundle 'michaeljsmith/vim-indent-object'
 Bundle 'vim-scripts/matchit.zip'
 Bundle 'sjl/splice.vim.git'
 Bundle 'gregsexton/gitv.git'
-"Bundle 'gilligan/vim-bebop'
-Bundle 'vim-scripts/YankRing.vim'
 Bundle 'vim-scripts/textobj-user'
 Bundle 'vim-scripts/textobj-entire'
 Bundle 'vim-scripts/textobj-line'
 Bundle 'mbriggs/mark.vim'
 filetype plugin indent on
 
+"Bundle 'lukerandall/haskellmode-vim'
+Bundle 'bitc/vim-hdevtools'
+Bundle 'vim-scripts/indenthaskell.vim'
+Bundle 'ujihisa/neco-ghc'
+Bundle 'vim-scripts/Superior-Haskell-Interaction-Mode-SHIM'
 
+filetype plugin indent on
+let $PATH = $PATH . ':' . expand("~/.cabal/bin")
 
 " fix neocomplcache behavior
 " with arrow keys
@@ -247,6 +253,18 @@ endfunction
 " plugin settings
 "
 
+" haskell-mode plugin {{{
+"let g:haddock_browser="/usr/bin/open"
+"au BufEnter *.hs compiler ghc
+" }}}
+
+
+" tabular plugin {{{
+vmap <Leader>t= :Tabularize /=<CR>
+vmap <Leader>t: :Tabularize /:<CR>
+vmap <Leader>t> :Tabularize /-><CR>
+" }}}
+
 "surround plugin {{{
 nmap \' ysiw'
 nmap \" ysiw"
@@ -372,6 +390,7 @@ autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
 autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
 
 if !exists('g:neocomplcache_omni_patterns')
   let g:neocomplcache_omni_patterns = {}
