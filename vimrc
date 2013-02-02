@@ -13,6 +13,7 @@ Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-unimpaired'
 Bundle 'tpope/vim-haml'
 Bundle 'tpope/vim-endwise'
+Bundle 'tpope/vim-eunuch'
 Bundle 'vim-scripts/slimv.vim'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'scrooloose/nerdtree'
@@ -53,13 +54,15 @@ Bundle 'vim-scripts/textobj-user'
 Bundle 'vim-scripts/textobj-entire'
 Bundle 'vim-scripts/textobj-line'
 Bundle 'mbriggs/mark.vim'
-filetype plugin indent on
-
-"Bundle 'lukerandall/haskellmode-vim'
 Bundle 'bitc/vim-hdevtools'
 Bundle 'vim-scripts/indenthaskell.vim'
 Bundle 'ujihisa/neco-ghc'
 Bundle 'vim-scripts/Superior-Haskell-Interaction-Mode-SHIM'
+Bundle 'kana/vim-textobj-lastpat'
+Bundle 'teramako/jscomplete-vim'
+Bundle 'sickill/vim-pasta'
+
+Bundle 'gilligan/js-omni'
 
 filetype plugin indent on
 let $PATH = $PATH . ':' . expand("~/.cabal/bin")
@@ -67,6 +70,10 @@ let $PATH = $PATH . ':' . expand("~/.cabal/bin")
 " fix neocomplcache behavior
 " with arrow keys
 let g:neocomplcache_enable_insert_char_pre=1
+
+if filereadable('~/.vim/local.vim')
+    so ~/.vim/local.vim
+endif
 
 "
 " global settings
