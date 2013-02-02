@@ -61,6 +61,7 @@ Bundle 'vim-scripts/Superior-Haskell-Interaction-Mode-SHIM'
 Bundle 'kana/vim-textobj-lastpat'
 Bundle 'teramako/jscomplete-vim'
 Bundle 'sickill/vim-pasta'
+Bundle 'coderifous/textobj-word-column.vim'
 
 Bundle 'gilligan/js-omni'
 
