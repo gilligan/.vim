@@ -59,7 +59,7 @@ Bundle 'vim-scripts/indenthaskell.vim'
 Bundle 'ujihisa/neco-ghc'
 Bundle 'vim-scripts/Superior-Haskell-Interaction-Mode-SHIM'
 Bundle 'kana/vim-textobj-lastpat'
-Bundle 'teramako/jscomplete-vim'
+"Bundle 'teramako/jscomplete-vim'
 Bundle 'sickill/vim-pasta'
 Bundle 'coderifous/textobj-word-column.vim'
 Bundle 'vim-scripts/Decho.git'
@@ -396,10 +396,11 @@ inoremap <expr><C-e>  neocomplcache#cancel_popup()
 " Enable omni completion.
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
 autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
-autocmd FileType javascript setlocal omnifunc=jscomplete#CompleteJS
 autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+autocmd FileType ruby,eruby setlocal omnifunc=rubycomplete#Complete
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
+autocmd FileType javascript,coffee setlocal omnifunc=javascriptcomplete#CompleteJS
 
 if !exists('g:neocomplcache_omni_patterns')
   let g:neocomplcache_omni_patterns = {}
@@ -452,15 +453,6 @@ endf
 au FileType * au BufWritePre <buffer> :silent! call <SID>StripTrailingWhitespace()`
 " }}}
 
-
-" completion settings {{{
-au FileType python setlocal omnifunc=pythoncomplete#Complete
-au FileType javascript,coffee setlocal omnifunc=javascriptcomplete#CompleteJS
-au FileType html setlocal omnifunc=htmlcomplete#CompleteTags
-au FileType css setlocal omnifunc=csscomplete#CompleteCSS
-au FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
-au FileType ruby,eruby setlocal omnifunc=rubycomplete#Complete
-" }}}
 
 " resize splits when window is resized {{{
 au VimResized * exe "normal! \<c-w>="
