@@ -450,6 +450,7 @@ autocmd BufWinEnter javascript match ExtraWhitespace /\s\+$/
 autocmd InsertEnter javascript match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd InsertLeave javascript match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave javascript call clearmatches()
+autocmd FileType javascript setlocal nofoldenable
 " }}}
 
 
