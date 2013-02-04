@@ -59,10 +59,10 @@ Bundle 'vim-scripts/indenthaskell.vim'
 Bundle 'ujihisa/neco-ghc'
 Bundle 'vim-scripts/Superior-Haskell-Interaction-Mode-SHIM'
 Bundle 'kana/vim-textobj-lastpat'
-"Bundle 'teramako/jscomplete-vim'
 Bundle 'sickill/vim-pasta'
 Bundle 'coderifous/textobj-word-column.vim'
 Bundle 'vim-scripts/Decho.git'
+Bundle 'Raimondi/delimitMate'
 
 Bundle 'gilligan/js-omni'
 
