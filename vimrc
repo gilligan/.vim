@@ -62,6 +62,7 @@ Bundle 'kana/vim-textobj-lastpat'
 Bundle 'teramako/jscomplete-vim'
 Bundle 'sickill/vim-pasta'
 Bundle 'coderifous/textobj-word-column.vim'
+Bundle 'vim-scripts/Decho.git'
 
 Bundle 'gilligan/js-omni'
 
@@ -395,7 +396,7 @@ inoremap <expr><C-e>  neocomplcache#cancel_popup()
 " Enable omni completion.
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
 autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
-autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType javascript setlocal omnifunc=jscomplete#CompleteJS
 autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
@@ -403,11 +404,13 @@ autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
 if !exists('g:neocomplcache_omni_patterns')
   let g:neocomplcache_omni_patterns = {}
 endif
+let g:neocomplcache_omni_patterns = '';
 let g:neocomplcache_omni_patterns['default'] = '\h\w*'
 let g:neocomplcache_omni_patterns.ruby = '[^. *\t]\.\w*\|\h\w*::'
 let g:neocomplcache_omni_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
 let g:neocomplcache_omni_patterns.c = '\%(\.\|->\)\h\w*'
 let g:neocomplcache_omni_patterns.cpp = '\h\w*\%(\.\|->\)\h\w*\|\h\w*::'
+let g:neocomplcache_omni_patterns.javascript = '[^. *\t]\w*\|[^. *\t]\.\%(\h\w*\)\?'
 " }}}
 
 
