@@ -409,7 +409,8 @@ autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
 if !exists('g:neocomplcache_omni_patterns')
   let g:neocomplcache_omni_patterns = {}
 endif
-let g:neocomplcache_omni_patterns = '';
+
+let g:neocomplcache_omni_patterns = {}
 let g:neocomplcache_omni_patterns['default'] = '\h\w*'
 let g:neocomplcache_omni_patterns.ruby = '[^. *\t]\.\w*\|\h\w*::'
 let g:neocomplcache_omni_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
