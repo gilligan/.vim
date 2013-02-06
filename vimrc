@@ -63,7 +63,7 @@ Bundle 'teramako/jscomplete-vim'
 Bundle 'sickill/vim-pasta'
 Bundle 'coderifous/textobj-word-column.vim'
 Bundle 'vim-scripts/Decho.git'
-
+Bundle 'Valloric/MatchTagAlways'
 Bundle 'gilligan/js-omni'
 
 filetype plugin indent on
@@ -285,6 +285,15 @@ nmap \< ysiw<
 
 " matchit plugin {{{
 set matchpairs+=<:>
+" }}}
+
+" MatchTagAlways plugin {{{
+let g:mta_filetypes = {
+    \ 'html' : 1,
+    \ 'xhtml' : 1,
+    \ 'xml' : 1,
+    \ 'mustache' : 1,
+    \}
 " }}}
 
 
