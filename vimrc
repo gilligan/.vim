@@ -63,7 +63,7 @@ Bundle 'sickill/vim-pasta'
 Bundle 'coderifous/textobj-word-column.vim'
 Bundle 'vim-scripts/Decho.git'
 Bundle 'Raimondi/delimitMate'
-
+Bundle 'Valloric/ListToggle'
 Bundle 'gilligan/js-omni'
 
 filetype plugin indent on
