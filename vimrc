@@ -64,6 +64,7 @@ Bundle 'coderifous/textobj-word-column.vim'
 Bundle 'vim-scripts/Decho.git'
 Bundle 'Raimondi/delimitMate'
 Bundle 'Valloric/ListToggle'
+Bundle 'Valloric/MatchTagAlways'
 Bundle 'gilligan/js-omni'
 
 filetype plugin indent on
@@ -283,6 +284,20 @@ nmap \< ysiw<
 "}}}
 
 
+" matchit plugin {{{
+set matchpairs+=<:>
+" }}}
+
+" MatchTagAlways plugin {{{
+let g:mta_filetypes = {
+    \ 'html' : 1,
+    \ 'xhtml' : 1,
+    \ 'xml' : 1,
+    \ 'mustache' : 1,
+    \}
+" }}}
+
+
 "fugitive plugin {{{
 autocmd QuickFixCmdPost *grep* cwindow
 
@@ -405,7 +420,8 @@ autocmd FileType javascript,coffee setlocal omnifunc=javascriptcomplete#Complete
 if !exists('g:neocomplcache_omni_patterns')
   let g:neocomplcache_omni_patterns = {}
 endif
-let g:neocomplcache_omni_patterns = '';
+
+let g:neocomplcache_omni_patterns = {}
 let g:neocomplcache_omni_patterns['default'] = '\h\w*'
 let g:neocomplcache_omni_patterns.ruby = '[^. *\t]\.\w*\|\h\w*::'
 let g:neocomplcache_omni_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
@@ -472,6 +488,7 @@ autocmd BufWinEnter javascript match ExtraWhitespace /\s\+$/
 autocmd InsertEnter javascript match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd InsertLeave javascript match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave javascript call clearmatches()
+autocmd FileType javascript setlocal nofoldenable
 " }}}
 
 
