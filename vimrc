@@ -281,6 +281,11 @@ nmap \< ysiw<
 "}}}
 
 
+" matchit plugin {{{
+set matchpairs+=<:>
+" }}}
+
+
 "fugitive plugin {{{
 autocmd QuickFixCmdPost *grep* cwindow
 
