@@ -243,6 +243,9 @@ if has("gui")
     else
         set guifont=Inconsolata-dz\ for\ Powerline\ Medium\ 10
     endif
+else
+    let g:Powerline_symbols = 'compatible'
+    let g:Powerline_dividers_override = ['||', '|', '||', '|']
 endif
 
 
