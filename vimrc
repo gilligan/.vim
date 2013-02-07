@@ -14,6 +14,7 @@ Bundle 'tpope/vim-unimpaired'
 Bundle 'tpope/vim-haml'
 Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-eunuch'
+Bundle 'tpope/vim-rsi'
 Bundle 'vim-scripts/slimv.vim'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'scrooloose/nerdtree'
@@ -57,6 +58,7 @@ Bundle 'vim-scripts/indenthaskell.vim'
 Bundle 'ujihisa/neco-ghc'
 Bundle 'vim-scripts/Superior-Haskell-Interaction-Mode-SHIM'
 Bundle 'kana/vim-textobj-lastpat'
+Bundle 'kana/vim-textobj-diff'
 Bundle 'sickill/vim-pasta'
 Bundle 'coderifous/textobj-word-column.vim'
 Bundle 'vim-scripts/Decho.git'
@@ -266,6 +268,10 @@ endfunction
 " haskell-mode plugin {{{
 "let g:haddock_browser="/usr/bin/open"
 "au BufEnter *.hs compiler ghc
+" }}}
+
+" splice plugin {{{
+let g:splice_prefix = "\\"
 " }}}
 
 
