@@ -62,7 +62,7 @@ Bundle 'kana/vim-textobj-diff'
 Bundle 'sickill/vim-pasta'
 Bundle 'coderifous/textobj-word-column.vim'
 Bundle 'vim-scripts/Decho.git'
-Bundle 'Raimondi/delimitMate'
+"Bundle 'Raimondi/delimitMate'
 Bundle 'Valloric/ListToggle'
 Bundle 'Valloric/MatchTagAlways'
 Bundle 'dpwright/vim-gf-ext'
@@ -276,7 +276,9 @@ endfunction
 "
 " EasyMotion plugin {{{
 "
-let g:EasyMotion_keys = 'asdfghjkl;'
+let g:EasyMotion_keys = 'asdfghjkl;qwertuiop'
+nmap q \\w
+imap <C-q> <C-o>\\w
 " }}}
 
 
