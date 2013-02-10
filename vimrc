@@ -67,7 +67,11 @@ Bundle 'Valloric/ListToggle'
 Bundle 'Valloric/MatchTagAlways'
 Bundle 'dpwright/vim-gf-ext'
 Bundle 'dahu/vim-fanfingtastic'
+Bundle 'helino/vim-json.git'
+Bundle 'regedarek/ZoomWin'
+
 Bundle 'gilligan/js-omni'
+Bundle 'gilligan/vim-wai'
 
 filetype plugin indent on
 let $PATH = $PATH . ':' . expand("~/.cabal/bin")
@@ -267,6 +271,14 @@ endfunction
 "
 " plugin settings
 "
+
+"
+" delimitMate plugin {{{
+"
+let delimitMate_matchpairs = "(:),[:],{:}"
+let delimitMate_smart_quotes = 0
+" }}}
+
 
 " haskell-mode plugin {{{
 "let g:haddock_browser="/usr/bin/open"
