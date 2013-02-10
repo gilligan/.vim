@@ -69,6 +69,7 @@ Bundle 'dpwright/vim-gf-ext'
 Bundle 'dahu/vim-fanfingtastic'
 Bundle 'helino/vim-json.git'
 Bundle 'regedarek/ZoomWin'
+Bundle 'goldfeld/vim-seek'
 
 Bundle 'gilligan/js-omni'
 Bundle 'gilligan/vim-wai'
@@ -271,6 +272,19 @@ endfunction
 "
 " plugin settings
 "
+
+"
+" EasyMotion plugin {{{
+"
+let g:EasyMotion_keys = 'asdfghjkl;'
+" }}}
+
+
+"
+" seek plugin {{{
+"
+let g:seek_enable_jumps = 1
+" }}}
 
 "
 " delimitMate plugin {{{
