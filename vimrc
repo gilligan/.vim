@@ -27,6 +27,7 @@ Bundle 'Lokaltog/vim-powerline'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'vim-scripts/SingleCompile'
 Bundle 'sjl/threesome.vim'
+Bundle 'sjl/clam.vim.git'
 Bundle 'scrooloose/syntastic'
 Bundle 'majutsushi/tagbar'
 Bundle 'Shougo/neocomplcache'
@@ -62,7 +63,6 @@ Bundle 'kana/vim-textobj-diff'
 Bundle 'sickill/vim-pasta'
 Bundle 'coderifous/textobj-word-column.vim'
 Bundle 'vim-scripts/Decho.git'
-"Bundle 'Raimondi/delimitMate'
 Bundle 'Valloric/ListToggle'
 Bundle 'Valloric/MatchTagAlways'
 Bundle 'dpwright/vim-gf-ext'
@@ -70,6 +70,7 @@ Bundle 'dahu/vim-fanfingtastic'
 Bundle 'helino/vim-json.git'
 Bundle 'regedarek/ZoomWin'
 Bundle 'goldfeld/vim-seek'
+Bundle 'othree/javascript-libraries-syntax.vim'
 
 Bundle 'gilligan/js-omni'
 Bundle 'gilligan/vim-wai'
@@ -167,7 +168,7 @@ command! -nargs=1 ReviewTicket :Glog --grep=<args> --
 map <F2> :NERDTreeToggle<CR>
 map <S-F2> :NERDTreeFind<CR>
 map <F3> :TagbarToggle<CR>
-map <F4> :BebopJsEval<CR>
+map <F4> :ConqueTermSplit bash<CR>
 nmap <F9> :SCCompile<cr>
 nmap <F10> :SCCompileRun<cr>
 map <C-\> :CtrlPBufTag<cr>
@@ -219,10 +220,10 @@ nnoremap <silent> ,cn :let @* = expand("%:t")<CR>
 noremap ,hl :set hlsearch! hlsearch?<CR>
 
 " select current javascript function
-vmap jf :normal va{oF(b<CR>
+vmap <Leader>jf :normal va{oF(b<CR>
 " select current javascript function including
 " possible name preceding the function statement
-vmap jF :normal va{oF(b^<CR>
+vmap <Leader>jF :normal va{oF(b^<CR>
 
 "happy-hacking-esque insert mode movement
 imap <C-j> <Down>
@@ -243,6 +244,8 @@ autocmd BufReadPost *
 " font settings {{{
 if has("gui")
     let g:Powerline_symbols = 'fancy'
+    highlight Cursor guifg=white guibg=steelblue
+    highlight iCursor guifg=white guibg=steelblue
     if has("gui_macvim")
         set guifont=Inconsolata\ for\ Powerline:h14
     else
