@@ -71,6 +71,7 @@ Bundle 'regedarek/ZoomWin'
 Bundle 'goldfeld/vim-seek'
 Bundle 'othree/javascript-libraries-syntax.vim'
 Bundle 'thinca/vim-textobj-comment'
+Bundle 'gcmt/psearch.vim'
 
 Bundle 'gilligan/js-omni'
 Bundle 'gilligan/vim-wai'
@@ -275,6 +276,12 @@ endfunction
 "
 " plugin settings
 "
+
+"
+" PSearch plugin {{{
+"
+nnoremap ~ :PSearch<CR>
+"}}}
 
 "
 " EasyMotion plugin {{{
