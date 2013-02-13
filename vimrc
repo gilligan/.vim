@@ -70,6 +70,7 @@ Bundle 'dahu/vim-fanfingtastic'
 Bundle 'helino/vim-json.git'
 Bundle 'regedarek/ZoomWin'
 Bundle 'goldfeld/vim-seek'
+Bundle 'vim-scripts/loremipsum'
 
 Bundle 'gilligan/js-omni'
 Bundle 'gilligan/vim-wai'
