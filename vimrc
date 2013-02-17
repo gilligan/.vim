@@ -447,7 +447,7 @@ let g:neocomplcache_enable_smart_case = 1
 let g:neocomplcache_enable_camel_case_completion = 1
 " Set minimum syntax keyword length.
 let g:neocomplcache_min_syntax_length = 4
-
+let g:neocomplcache_enable_auto_close_preview = 1
 "imap <C-space>     <Plug>(neocomplcache_snippets_expand)
 inoremap <expr><C-g>     neocomplcache#undo_completion()
 "inoremap <expr><C-l>     neocomplcache#complete_common_string()
