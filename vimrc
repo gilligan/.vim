@@ -61,7 +61,6 @@ Bundle 'vim-scripts/Superior-Haskell-Interaction-Mode-SHIM'
 Bundle 'kana/vim-textobj-lastpat'
 Bundle 'kana/vim-textobj-diff'
 Bundle 'sickill/vim-pasta'
-Bundle 'coderifous/textobj-word-column.vim'
 Bundle 'vim-scripts/Decho.git'
 Bundle 'Valloric/ListToggle'
 Bundle 'Valloric/MatchTagAlways'
@@ -72,6 +71,8 @@ Bundle 'regedarek/ZoomWin'
 Bundle 'goldfeld/vim-seek'
 Bundle 'vim-scripts/loremipsum'
 Bundle 'othree/javascript-libraries-syntax.vim'
+Bundle 'thinca/vim-textobj-comment'
+Bundle 'gcmt/psearch.vim'
 
 Bundle 'gilligan/js-omni'
 Bundle 'gilligan/vim-wai'
@@ -278,6 +279,12 @@ endfunction
 "
 
 "
+" PSearch plugin {{{
+"
+nnoremap ~ :PSearch<CR>
+"}}}
+
+"
 " EasyMotion plugin {{{
 "
 let g:EasyMotion_keys = 'asdfghjkl;qwertuiop'
@@ -441,7 +448,7 @@ let g:neocomplcache_enable_smart_case = 1
 let g:neocomplcache_enable_camel_case_completion = 1
 " Set minimum syntax keyword length.
 let g:neocomplcache_min_syntax_length = 4
-
+let g:neocomplcache_enable_auto_close_preview = 1
 "imap <C-space>     <Plug>(neocomplcache_snippets_expand)
 inoremap <expr><C-g>     neocomplcache#undo_completion()
 "inoremap <expr><C-l>     neocomplcache#complete_common_string()
