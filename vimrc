@@ -72,6 +72,7 @@ Bundle 'goldfeld/vim-seek'
 Bundle 'othree/javascript-libraries-syntax.vim'
 Bundle 'thinca/vim-textobj-comment'
 Bundle 'gcmt/psearch.vim'
+Bundle 'vim-scripts/EditPlus'
 
 Bundle 'gilligan/js-omni'
 Bundle 'gilligan/vim-wai'
@@ -133,7 +134,6 @@ let g:rct_completion_use_fri = 1
 set clipboard=unnamed " clipboard = unnamed reg for easy interaction
 set noerrorbells visualbell t_vb=
 autocmd GUIEnter * set visualbell t_vb=
-colo editplus
 
 " Use Q to intelligently close a window
 " (if there are multiple windows into the same buffer)
@@ -243,7 +243,9 @@ autocmd BufReadPost *
 
 
 " font settings {{{
+set t_Co=256
 if has("gui")
+    colorscheme editplus
     let g:Powerline_symbols = 'fancy'
     highlight Cursor guifg=white guibg=steelblue
     highlight iCursor guifg=white guibg=steelblue
@@ -255,6 +257,7 @@ if has("gui")
 else
     let g:Powerline_symbols = 'compatible'
     let g:Powerline_dividers_override = ['||', '|', '||', '|']
+    let NERDTreeDirArrows=0
 endif
 
 
@@ -281,6 +284,7 @@ endfunction
 " PSearch plugin {{{
 "
 nnoremap ~ :PSearch<CR>
+let g:pse_prompt='>> '
 "}}}
 
 "
