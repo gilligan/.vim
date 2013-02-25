@@ -71,9 +71,11 @@ Bundle 'regedarek/ZoomWin'
 Bundle 'goldfeld/vim-seek'
 Bundle 'othree/javascript-libraries-syntax.vim'
 Bundle 'thinca/vim-textobj-comment'
-Bundle 'gcmt/psearch.vim'
+"Bundle 'gcmt/psearch.vim'
 Bundle 'vim-scripts/EditPlus'
+Bundle 'chriskempson/base16-vim'
 
+Bundle 'gilligan/psearch.vim'
 Bundle 'gilligan/js-omni'
 Bundle 'gilligan/vim-wai'
 
@@ -231,6 +233,12 @@ imap <C-j> <Down>
 imap <C-k> <Up>
 imap <C-h> <Left>
 imap <C-l> <Right>
+
+" use arrow keys for window manipulation
+nnoremap <silent> <Up> <C-w>+<C-w>+
+nnoremap <silent> <Down> <C-w>-<C-w>-
+nnoremap <silent> <Left> <C-w><<C-w><
+nnoremap <silent> <Right> <C-w>><C-w>>
 " general mappings }}}
 
 
