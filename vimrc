@@ -74,6 +74,7 @@ Bundle 'thinca/vim-textobj-comment'
 "Bundle 'gcmt/psearch.vim'
 Bundle 'vim-scripts/EditPlus'
 Bundle 'chriskempson/base16-vim'
+Bundle 'jeetsukumaran/vim-buffergator'
 
 Bundle 'gilligan/psearch.vim'
 Bundle 'gilligan/js-omni'
