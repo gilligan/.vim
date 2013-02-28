@@ -1,0 +1,4 @@
+"
+" matchit plugin
+"
+set matchpairs+=<:>
