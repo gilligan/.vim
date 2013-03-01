@@ -70,5 +70,10 @@ nnoremap <silent> <Up> <C-w>+<C-w>+
 nnoremap <silent> <Down> <C-w>-<C-w>-
 nnoremap <silent> <Left> <C-w><<C-w><
 nnoremap <silent> <Right> <C-w>><C-w>>
+
+" start editing on first non-whitespace char of current line
+imap <C-i> <C-O>^
+nmap <C-i> ^i
+
 " general mappings }}}
 
