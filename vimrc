@@ -74,12 +74,18 @@ Bundle 'vim-scripts/EditPlus'
 Bundle 'chriskempson/base16-vim'
 Bundle 'jeetsukumaran/vim-buffergator'
 Bundle 'airblade/vim-gitgutter'
+Bundle 'yankstack'
 
 Bundle 'gilligan/js-omni'
 Bundle 'gilligan/vim-wai'
 Bundle 'gilligan/textobj-gitgutter'
 
 filetype plugin indent on
+
+" Set alt keys to meta on osx
+if has('gui_macvim')
+    set macmeta
+endif
 
 "
 " load all plugin settings from separate files
