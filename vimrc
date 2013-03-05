@@ -58,7 +58,6 @@ Bundle 'ujihisa/neco-ghc'
 Bundle 'vim-scripts/Superior-Haskell-Interaction-Mode-SHIM'
 Bundle 'kana/vim-textobj-lastpat'
 Bundle 'kana/vim-textobj-diff'
-Bundle 'sickill/vim-pasta'
 Bundle 'vim-scripts/Decho.git'
 Bundle 'Valloric/ListToggle'
 Bundle 'Valloric/MatchTagAlways'
@@ -74,7 +73,6 @@ Bundle 'vim-scripts/EditPlus'
 Bundle 'chriskempson/base16-vim'
 Bundle 'jeetsukumaran/vim-buffergator'
 Bundle 'airblade/vim-gitgutter'
-Bundle 'yankstack'
 
 Bundle 'gilligan/js-omni'
 Bundle 'gilligan/vim-wai'
@@ -86,6 +84,7 @@ filetype plugin indent on
 if has('gui_macvim')
     set macmeta
 endif
+
 
 "
 " load all plugin settings from separate files

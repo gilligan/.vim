@@ -60,10 +60,10 @@ vmap <Leader>jf :normal va{oF(b<CR>
 vmap <Leader>jF :normal va{oF(b^<CR>
 
 "happy-hacking-esque insert mode movement
-imap <C-j> <Down>
-imap <C-k> <Up>
-imap <C-h> <Left>
-imap <C-l> <Right>
+"imap <C-j> <Down>
+"imap <C-k> <Up>
+"imap <C-h> <Left>
+"imap <C-l> <Right>
 
 " use arrow keys for window manipulation
 nnoremap <silent> <Up> <C-w>+<C-w>+
