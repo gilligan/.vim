@@ -1,5 +1,4 @@
 " global settings {{{
-let g:molokai_original = 1
 syntax on            " enable syntax highlightning
 set nocp             " no compatible mode
 set ambiwidth=double " display icons correctly
@@ -41,4 +40,6 @@ let g:rct_completion_use_fri = 1
 set clipboard=unnamed " clipboard = unnamed reg for easy interaction
 set noerrorbells visualbell t_vb=
 autocmd GUIEnter * set visualbell t_vb=
+let mapleader=','
+let g:molokai_original = 1
 " }}}

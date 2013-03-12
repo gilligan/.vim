@@ -58,7 +58,6 @@ Bundle 'ujihisa/neco-ghc'
 Bundle 'vim-scripts/Superior-Haskell-Interaction-Mode-SHIM'
 Bundle 'kana/vim-textobj-lastpat'
 Bundle 'kana/vim-textobj-diff'
-Bundle 'sickill/vim-pasta'
 Bundle 'vim-scripts/Decho.git'
 Bundle 'Valloric/ListToggle'
 Bundle 'Valloric/MatchTagAlways'
@@ -81,6 +80,12 @@ Bundle 'gilligan/vim-wai'
 Bundle 'gilligan/textobj-gitgutter'
 
 filetype plugin indent on
+
+" Set alt keys to meta on osx
+if has('gui_macvim')
+    set macmeta
+endif
+
 
 "
 " load all plugin settings from separate files
