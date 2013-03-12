@@ -1,0 +1,58 @@
+snippet :view
+abbr new backbone view
+options head
+  SB.ns('GL.view');
+  /**
+   * @class `substitute(expand('%:t'),".js","","")`
+   * ${1:description}
+   */
+  GL.view.`substitute(expand('%:t'),".js","","")` = GL.view.View.extend({
+      templateId: '${2:templateId}',
+      events: {
+      },
+      clickHandler: function () {
+      },
+      getData: function () {
+          return {
+          };
+      }
+  });
+
+snippet :model
+abbr new backbone model
+options head
+    SB.ns('GL.model');
+
+    /**
+     * @class GL.model.`substitute(expand('%:t'),".js","","")`
+     * @extends GL.model.Model
+     *
+     * ${1:description}
+     *
+     */
+    GL.model.`substitute(expand('%:t'),".js","","")` = GL.model.Model.extend({
+        ${2}
+    });
+
+snippet :collection
+abbr new backbone collection
+options head
+    SB.ns('GL.model');
+    /**
+     * @class GL.model.`substitute(expand('%:t'),".js","","")`
+     * @extends GL.model.Model
+     * ${1:description}
+     */
+    GL.model.`substitute(expand('%:t'),".js","","")` = GL.model.Collection.extend({
+        ${2}
+    });
+
+snippet :init
+abbr backbone initialize function
+options head
+    initialize: function () {
+        ${1}
+        GL.view.`substitute(expand('%:t'),".js","","")`.supr.initialize.call(this);
+    }
+
+

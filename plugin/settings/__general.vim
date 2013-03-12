@@ -40,6 +40,5 @@ let g:rct_completion_use_fri = 1
 set clipboard=unnamed " clipboard = unnamed reg for easy interaction
 set noerrorbells visualbell t_vb=
 autocmd GUIEnter * set visualbell t_vb=
-let mapleader=','
 let g:molokai_original = 1
 " }}}
