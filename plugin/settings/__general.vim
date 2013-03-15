@@ -9,7 +9,7 @@ set ruler            " show ruler
 set cursorline       " higlight cursor line
 set tags=./tags;     " look for tags in current dir and up
 set nu               " show line numbers
-set cmdheight=2      " cmd line is 2 lines high
+set cmdheight=1      " cmd line is 2 lines high
 set wmh=0            " minimal window height is 0
 set expandtab        " expand tab with spaces
 set tabstop=4        " tab = 4 spaces
@@ -33,7 +33,7 @@ set guioptions-=l    " disable gui stuff
 set guioptions-=L    " disable gui stuff
 set nobackup         " no useless backup files
 set noswapfile       " no useless swap files
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip " ignore patterns for completion
+set wildignore+=*.so,*.swp,*.zip " ignore patterns for completion
 set nohidden
 set autochdir         " change directory to current file working dir
 let g:rct_completion_use_fri = 1
