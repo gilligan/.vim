@@ -74,6 +74,7 @@ Bundle 'vim-scripts/EditPlus'
 Bundle 'chriskempson/base16-vim'
 Bundle 'jeetsukumaran/vim-buffergator'
 Bundle 'airblade/vim-gitgutter'
+Bundle 'vim-scripts/UnconditionalPaste'
 
 Bundle 'gilligan/js-omni'
 Bundle 'gilligan/vim-wai'
