@@ -41,4 +41,10 @@ set clipboard=unnamed " clipboard = unnamed reg for easy interaction
 set noerrorbells visualbell t_vb=
 autocmd GUIEnter * set visualbell t_vb=
 let g:molokai_original = 1
+set synmaxcol=800      " do not highlight huge files
+augroup cline          " show cursorline only in active view/normal mode
+    au!
+    au WinLeave,InsertEnter * set nocursorline
+    au WinEnter,InsertLeave * set cursorline
+augroup END
 " }}}
