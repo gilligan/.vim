@@ -75,5 +75,8 @@ nnoremap <silent> <Right> <C-w>><C-w>>
 imap <C-i> <C-O>^
 nmap <C-i> ^i
 
+" replace word under cursor
+nnoremap <Leader>s :%s/\<<C-r><C-w>\>/
+
 " general mappings }}}
 
