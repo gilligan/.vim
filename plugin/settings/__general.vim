@@ -41,4 +41,5 @@ set clipboard=unnamed " clipboard = unnamed reg for easy interaction
 set noerrorbells visualbell t_vb=
 autocmd GUIEnter * set visualbell t_vb=
 let g:molokai_original = 1
+let &shellpipe='&>'
 " }}}
