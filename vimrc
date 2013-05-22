@@ -77,6 +77,7 @@ Bundle 'jeetsukumaran/vim-buffergator'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'vim-scripts/UnconditionalPaste'
 Bundle 'terryma/vim-expand-region'
+Bundle 'heavenshell/vim-jsdoc'
 
 Bundle 'gilligan/js-omni'
 Bundle 'gilligan/vim-wai'
