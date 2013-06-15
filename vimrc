@@ -8,6 +8,10 @@ call vundle#rc()
 "
 
 Bundle 'gmarik/vundle'
+
+"
+" tpope plugins
+"
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-unimpaired'
@@ -17,70 +21,116 @@ Bundle 'tpope/vim-eunuch'
 Bundle 'tpope/vim-rsi'
 Bundle 'tpope/vim-dispatch'
 Bundle 'tpope/vim-obsession'
-Bundle 'vim-scripts/slimv.vim'
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'scrooloose/nerdtree'
-Bundle 'vim-scripts/argtextobj.vim'
-Bundle 'Shougo/vimshell.git'
-Bundle 'current-func-info.vim'
-Bundle 'kien/ctrlp.vim'
-Bundle 'kien/rainbow_parentheses.vim'
-Bundle 'Lokaltog/vim-powerline'
-Bundle 'Lokaltog/vim-easymotion'
-Bundle 'vim-scripts/SingleCompile'
-Bundle 'sjl/clam.vim.git'
-Bundle 'scrooloose/syntastic'
-Bundle 'majutsushi/tagbar'
+
+"
+" code completion
+"
 Bundle 'Shougo/neocomplcache'
 Bundle 'Shougo/neosnippet'
-Bundle 'Shougo/vimproc'
+
+"
+" javascript & web
+"
 Bundle 'othree/html5.vim'
-Bundle 'bkad/CamelCaseMotion'
 Bundle 'juvenn/mustache.vim'
-Bundle 'mattn/zencoding-vim'
 Bundle 'pangloss/vim-javascript'
 Bundle 'claco/jasmine.vim'
-"Bundle 'jpalardy/vim-slime'
-Bundle 'benmills/vimux.git'
+Bundle 'vim-scripts/loremipsum'
+Bundle 'heavenshell/vim-jsdoc'
+Bundle 'mattn/zencoding-vim'
 Bundle 'Rykka/colorv.vim'
-Bundle 'tomasr/molokai.git'
-Bundle 'Conque-Shell'
-Bundle 'tarruda/vim-conque-repl'
-Bundle 'michaeljsmith/vim-indent-object'
-Bundle 'vim-scripts/matchit.zip'
-Bundle 'sjl/splice.vim.git'
-Bundle 'gregsexton/gitv.git'
+Bundle 'marijnh/tern_for_vim'
+
+"
+" text objects & motions
+"
 Bundle 'vim-scripts/textobj-user'
 Bundle 'vim-scripts/textobj-entire'
 Bundle 'vim-scripts/textobj-line'
+Bundle 'kana/vim-textobj-lastpat'
+Bundle 'kana/vim-textobj-diff'
+Bundle 'vim-scripts/argtextobj.vim'
+Bundle 'thinca/vim-textobj-comment'
+Bundle 'gilligan/textobj-gitgutter'
+Bundle 'bkad/CamelCaseMotion'
+Bundle 'michaeljsmith/vim-indent-object'
+Bundle 'terryma/vim-expand-region'
+Bundle 'Lokaltog/vim-easymotion'
+
+"
+" searching, matching, marks
+"
+Bundle 'dahu/vim-fanfingtastic'
+Bundle 'vim-scripts/matchit.zip'
 Bundle 'mbriggs/mark.vim'
+Bundle 'goldfeld/vim-seek'
+Bundle 'gcmt/psearch.vim'
+Bundle 'Valloric/MatchTagAlways'
+Bundle 'gcmt/breeze.vim'
+
+"
+" haskell
+"
 Bundle 'bitc/vim-hdevtools'
 Bundle 'vim-scripts/indenthaskell.vim'
 Bundle 'ujihisa/neco-ghc'
 Bundle 'vim-scripts/Superior-Haskell-Interaction-Mode-SHIM'
-Bundle 'kana/vim-textobj-lastpat'
-Bundle 'kana/vim-textobj-diff'
-Bundle 'vim-scripts/Decho.git'
-Bundle 'Valloric/ListToggle'
-Bundle 'Valloric/MatchTagAlways'
-Bundle 'dpwright/vim-gf-ext'
-Bundle 'dahu/vim-fanfingtastic'
-Bundle 'helino/vim-json.git'
-Bundle 'regedarek/ZoomWin'
-Bundle 'goldfeld/vim-seek'
-Bundle 'vim-scripts/loremipsum'
-Bundle 'thinca/vim-textobj-comment'
-Bundle 'gcmt/psearch.vim'
-Bundle 'vim-scripts/EditPlus'
-Bundle 'chriskempson/base16-vim'
-Bundle 'jeetsukumaran/vim-buffergator'
-Bundle 'airblade/vim-gitgutter'
-Bundle 'vim-scripts/UnconditionalPaste'
-Bundle 'terryma/vim-expand-region'
 
-Bundle 'gilligan/js-omni'
+"
+" LISP
+"
+Bundle 'vim-scripts/slimv.vim'
+
+"
+" themes / file type plugins
+"
+"Bundle 'maciakl/vim-neatstatus'
+Bundle 'Lokaltog/vim-powerline'
+Bundle 'tomasr/molokai.git'
+Bundle 'vim-scripts/EditPlus'
+Bundle 'helino/vim-json.git'
+
+"
+" shell & interaction
+"
+Bundle 'Shougo/vimproc'
+Bundle 'Shougo/vimshell.git'
+Bundle 'benmills/vimux.git'
+Bundle 'Conque-Shell'
+Bundle 'tarruda/vim-conque-repl'
+Bundle 'sjl/clam.vim.git'
+
+"
+" source control & diffing
+"
+Bundle 'sjl/splice.vim.git'
+Bundle 'gregsexton/gitv.git'
+Bundle 'http://www.tidraso.co.uk/repository/vim-plugin/'
+"Bundle 'airblade/vim-gitgutter'
+
+"
+" buffers & window manipulation
+"
+Bundle 'kien/ctrlp.vim'
+Bundle 'regedarek/ZoomWin'
+Bundle 'jeetsukumaran/vim-buffergator'
+Bundle 'Valloric/ListToggle'
+Bundle 'mhinz/vim-startify'
+Bundle 'scrooloose/nerdcommenter'
+Bundle 'scrooloose/nerdtree'
+
+"
+" misc plugins
+"
+Bundle 'vim-scripts/Decho.git'
+Bundle 'vim-scripts/UnconditionalPaste'
 Bundle 'gilligan/vim-wai'
-Bundle 'gilligan/textobj-gitgutter'
+Bundle 'current-func-info.vim'
+Bundle 'vim-scripts/SingleCompile'
+Bundle 'majutsushi/tagbar'
+Bundle 'scrooloose/syntastic'
+
+let g:niji_matching_filetypes = ['javascript', 'lisp', 'ruby', 'python']
 
 filetype plugin indent on
 
@@ -103,5 +153,3 @@ endfor
 if filereadable('~/.vim/local.vim')
     so ~/.vim/local.vim
 endif
-
-
