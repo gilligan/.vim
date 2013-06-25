@@ -1,0 +1,7 @@
+"Bundle 'bitc/vim-hdevtools'
+Bundle 'vim-scripts/indenthaskell.vim'
+Bundle 'vim-scripts/Superior-Haskell-Interaction-Mode-SHIM'
+Bundle 'dag/vim2hs'
+Bundle 'eagletmt/ghcmod-vim'
+Bundle 'ujihisa/neco-ghc'
+Bundle 'zhaocai/linepower.vim'

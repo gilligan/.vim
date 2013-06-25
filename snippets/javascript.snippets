@@ -1,0 +1,54 @@
+snippet :view "create new view class" b
+  SB.ns('GL.view');
+  /**
+   * @class `!v substitute(expand('%:t'),".js","","")`
+   * ${1:description}
+   */
+  GL.view.`!v substitute(expand('%:t'),".js","","")` = GL.view.View.extend({
+      templateId: '${2:templateId}',
+      events: {
+      },
+      clickHandler: function () {
+      },
+      getData: function () {
+          return {
+          };
+      }
+  });
+endsnippet
+
+snippet :model "create new model" b
+    SB.ns('GL.model');
+
+    /**
+     * @class GL.model.`!v substitute(expand('%:t'),".js","","")`
+     * @extends GL.model.Model
+     *
+     * ${1:description}
+     *
+     */
+    GL.model.`!v substitute(expand('%:t'),".js","","")` = GL.model.Model.extend({
+        ${2}
+    });
+endsnippet
+
+snippet :collection "create new collection" b
+    SB.ns('GL.model');
+    /**
+     * @class GL.model.`!v substitute(expand('%:t'),".js","","")`
+     * @extends GL.model.Model
+     * ${1:description}
+     */
+    GL.model.`!v substitute(expand('%:t'),".js","","")` = GL.model.Collection.extend({
+        ${2}
+    });
+endsnippet
+
+snippet :init "init function" b
+    initialize: function () {
+        ${1}
+        GL.view.`!v substitute(expand('%:t'),".js","","")`.supr.initialize.call(this);
+    }
+endsnippet
+
+

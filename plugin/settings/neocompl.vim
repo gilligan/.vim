@@ -30,7 +30,8 @@ autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
 autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
-autocmd FileType javascript,coffee setlocal omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType javascript,coffee setlocal omnifunc=tern#Complete
+"autocmd FileType javascript,coffee setlocal omnifunc=javascriptcomplete#CompleteJS
 
 " disabled because too slow
 "autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
