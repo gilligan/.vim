@@ -71,10 +71,19 @@ Bundle 'gcmt/breeze.vim'
 "
 " haskell
 "
-Bundle 'bitc/vim-hdevtools'
 Bundle 'vim-scripts/indenthaskell.vim'
-Bundle 'ujihisa/neco-ghc'
 Bundle 'vim-scripts/Superior-Haskell-Interaction-Mode-SHIM'
+Bundle 'dag/vim2hs'
+Bundle 'eagletmt/ghcmod-vim'
+Bundle 'ujihisa/neco-ghc'
+Bundle 'lukerandall/haskellmode-vim'
+
+
+"Bundle 'bitc/vim-hdevtools'
+"Bundle 'vim-scripts/indenthaskell.vim'
+"Bundle 'ujihisa/neco-ghc'
+"Bundle 'vim-scripts/Superior-Haskell-Interaction-Mode-SHIM'
+"Bundle 'dag/vim2hs'
 
 "
 " LISP
