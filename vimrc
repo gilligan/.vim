@@ -25,8 +25,8 @@ Bundle 'tpope/vim-obsession'
 "
 " code completion
 "
-Bundle 'Shougo/neocomplcache'
-Bundle 'Shougo/neosnippet'
+Bundle 'Valloric/YouCompleteMe'
+Bundle 'SirVer/ultisnips'
 
 "
 " javascript & web
@@ -84,7 +84,6 @@ Bundle 'vim-scripts/slimv.vim'
 "
 " themes / file type plugins
 "
-"Bundle 'maciakl/vim-neatstatus'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'tomasr/molokai.git'
 Bundle 'vim-scripts/EditPlus'
