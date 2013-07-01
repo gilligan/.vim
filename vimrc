@@ -138,6 +138,12 @@ Bundle 'vim-scripts/SingleCompile'
 Bundle 'majutsushi/tagbar'
 Bundle 'scrooloose/syntastic'
 
+"
+" plugin tests
+"
+Bundle 'rizzatti/funcoo.vim'
+Bundle 'rizzatti/dash.vim'
+
 let g:niji_matching_filetypes = ['javascript', 'lisp', 'ruby', 'python']
 
 filetype plugin indent on
