@@ -78,13 +78,6 @@ Bundle 'eagletmt/ghcmod-vim'
 Bundle 'ujihisa/neco-ghc'
 Bundle 'lukerandall/haskellmode-vim'
 
-
-"Bundle 'bitc/vim-hdevtools'
-"Bundle 'vim-scripts/indenthaskell.vim'
-"Bundle 'ujihisa/neco-ghc'
-"Bundle 'vim-scripts/Superior-Haskell-Interaction-Mode-SHIM'
-"Bundle 'dag/vim2hs'
-
 "
 " LISP
 "
@@ -138,21 +131,8 @@ Bundle 'vim-scripts/SingleCompile'
 Bundle 'majutsushi/tagbar'
 Bundle 'scrooloose/syntastic'
 
-"
-" plugin tests
-"
-Bundle 'rizzatti/funcoo.vim'
-Bundle 'rizzatti/dash.vim'
-
-let g:niji_matching_filetypes = ['javascript', 'lisp', 'ruby', 'python']
 
 filetype plugin indent on
-
-" Set alt keys to meta on osx
-if has('gui_macvim')
-    set macmeta
-endif
-
 
 "
 " load all plugin settings from separate files
@@ -164,6 +144,7 @@ endfor
 "
 " load local overrides
 "
-if filereadable('~/.vim/local.vim')
-    so ~/.vim/local.vim
+let local_config = glob('~/.vim/')  . hostname() . '.vim'
+if filereadable(local_config)
+    exe 'source ' . local_config
 endif
