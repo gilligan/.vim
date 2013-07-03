@@ -20,12 +20,9 @@ map <C-Left> <C-W>h<C-W>_
 map <C-Right> <C-W>l<C-W>_
 " paste clipboard contents
 map ,p "+p
-" snes help mappings:
-nmap  ,fr :execute 'help ' . expand('<cword>')<CR>
 nmap  ,q  :bd<CR>
 " add doxygen comment template
 map ,dx :Dox<CR>
-map ,r :rubyf %<CR>
 " move up one line
 " and insert new indented line
 " below with Command-k
@@ -41,7 +38,7 @@ map ,L :execute ":%s@\\<" . expand("<cword>") . "\\>\@&@gn"<CR>
 " change word with previously yanked text
 noremap S diw"0P
 " jump to end of current {} block
-imap <C-j> <C-o>:normal ]}$<CR>
+"imap <C-j> <C-o>:normal ]}$<CR>
 " overwrite current word with yank buffer
 nnoremap ,ow "_diwhp
 " add semicolon to end of line
