@@ -97,6 +97,7 @@ Bundle 'Lokaltog/vim-powerline'
 Bundle 'tomasr/molokai.git'
 Bundle 'vim-scripts/EditPlus'
 Bundle 'helino/vim-json.git'
+Bundle 'Lucius'
 
 "
 " shell & interaction
@@ -138,7 +139,7 @@ Bundle 'vim-scripts/SingleCompile'
 Bundle 'majutsushi/tagbar'
 Bundle 'scrooloose/syntastic'
 
-let g:niji_matching_filetypes = ['javascript', 'lisp', 'ruby', 'python']
+colo lucius
 
 filetype plugin indent on
 
