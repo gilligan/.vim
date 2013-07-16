@@ -18,9 +18,9 @@ Bundle 'tpope/vim-unimpaired'
 Bundle 'tpope/vim-haml'
 Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-eunuch'
-Bundle 'tpope/vim-rsi'
 Bundle 'tpope/vim-dispatch'
 Bundle 'tpope/vim-obsession'
+Bundle 'tpope/vim-repeat'
 
 "
 " code completion
@@ -49,9 +49,11 @@ Bundle 'vim-scripts/textobj-entire'
 Bundle 'vim-scripts/textobj-line'
 Bundle 'kana/vim-textobj-lastpat'
 Bundle 'kana/vim-textobj-diff'
+Bundle 'kana/vim-textobj-syntax'
 Bundle 'vim-scripts/argtextobj.vim'
 Bundle 'thinca/vim-textobj-comment'
 Bundle 'gilligan/textobj-gitgutter'
+Bundle 'gilligan/textobj-lastpaste'
 Bundle 'bkad/CamelCaseMotion'
 Bundle 'michaeljsmith/vim-indent-object'
 Bundle 'terryma/vim-expand-region'
@@ -108,7 +110,7 @@ Bundle 'sjl/clam.vim.git'
 Bundle 'sjl/splice.vim.git'
 Bundle 'gregsexton/gitv.git'
 Bundle 'http://www.tidraso.co.uk/repository/vim-plugin/'
-"Bundle 'airblade/vim-gitgutter'
+Bundle 'mhinz/vim-signify'
 
 "
 " buffers & window manipulation
@@ -131,6 +133,7 @@ Bundle 'current-func-info.vim'
 Bundle 'vim-scripts/SingleCompile'
 Bundle 'majutsushi/tagbar'
 Bundle 'scrooloose/syntastic'
+
 
 colo lucius
 filetype plugin indent on

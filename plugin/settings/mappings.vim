@@ -69,8 +69,8 @@ nnoremap <silent> <Left> <C-w><<C-w><
 nnoremap <silent> <Right> <C-w>><C-w>>
 
 " start editing on first non-whitespace char of current line
-imap <C-i> <C-O>^
-nmap <C-i> ^i
+"imap <C-i> <C-O>^
+"nmap <C-i> ^i
 
 " replace word under cursor
 nnoremap <Leader>s :%s/\<<C-r><C-w>\>/
