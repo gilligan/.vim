@@ -1,7 +1,7 @@
 "
 " syntastic plugin
 "
-let g:syntastic_javascript_checker="jshint"
+let g:syntastic_javascript_checkers = ['jshint']
 "mark syntax errors with :signs
 let g:syntastic_enable_signs=1
 "automatically jump to the error when saving the file
