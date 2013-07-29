@@ -15,10 +15,10 @@ endif
 "
 Bundle 'rizzatti/funcoo.vim'
 Bundle 'rizzatti/dash.vim'
+Bundle 'Yggdroot/indentLine'
 
 
 "
 " plugin tests
 "
-Bundle 'yonchu/accelerated-smooth-scroll'
 
