@@ -1,7 +1,7 @@
 " global settings {{{
 syntax on            " enable syntax highlightning
 set nocp             " no compatible mode
-set ambiwidth=double " display icons correctly
+set ambiwidth=single " display icons correctly
 set gdefault         " always enable greedy mode
 set ignorecase       " ignore case in searches
 set smartcase        " smarter ignorecase

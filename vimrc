@@ -34,10 +34,9 @@ Bundle 'SirVer/ultisnips'
 Bundle 'othree/html5.vim'
 Bundle 'juvenn/mustache.vim'
 Bundle 'pangloss/vim-javascript'
-Bundle 'claco/jasmine.vim'
 Bundle 'vim-scripts/loremipsum'
 Bundle 'heavenshell/vim-jsdoc'
-Bundle 'mattn/zencoding-vim'
+Bundle 'mattn/emmet-vim'
 Bundle 'Rykka/colorv.vim'
 Bundle 'marijnh/tern_for_vim'
 
@@ -87,7 +86,7 @@ Bundle 'vim-scripts/slimv.vim'
 "
 " themes / file type plugins
 "
-Bundle 'Lokaltog/vim-powerline'
+Bundle 'bling/vim-airline'
 Bundle 'tomasr/molokai.git'
 Bundle 'vim-scripts/EditPlus'
 Bundle 'helino/vim-json.git'
@@ -118,7 +117,6 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'regedarek/ZoomWin'
 Bundle 'jeetsukumaran/vim-buffergator'
 Bundle 'Valloric/ListToggle'
-"Bundle 'mhinz/vim-startify'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'scrooloose/nerdtree'
 
@@ -132,7 +130,6 @@ Bundle 'current-func-info.vim'
 Bundle 'vim-scripts/SingleCompile'
 Bundle 'majutsushi/tagbar'
 Bundle 'scrooloose/syntastic'
-
 
 colo lucius
 filetype plugin indent on

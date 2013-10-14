@@ -55,4 +55,12 @@ options head
         GL.view.`substitute(expand('%:t'),".js","","")`.supr.initialize.call(this);
     }
 
-
+snippet :reqproxy
+abbr request proxy call
+GL.global.proxy.request({
+    service: '${1:service}',
+    action: '${2:action}',
+    success: '${3:success}',
+    error: '${4:error}',
+    scope: this
+});

@@ -12,3 +12,41 @@ iabbr <silent> __o ö<C-R>=Eatchar('\s')<CR>
 iabbr <silent> __u ü<C-R>=Eatchar('\s')<CR>
 iabbr <silent> __s ß<C-R>=Eatchar('\s')<CR>
 
+let g:movealong_default_keys = 1
+
+Bundle 'prendradjaja/vim-vertigo'
+Bundle 'kana/vim-arpeggio'
+
+nnoremap <silent> <Space>j :call WrapVertigoDown()<CR>
+nnoremap <silent> <Space>k :call WrapVertigoUp()<CR>
+
+
+function! WrapVertigoDown()
+    set relativenumber
+    exe 'VertigoDown n'
+    set number
+endfunction
+
+function! WrapVertigoUp()
+    set relativenumber
+    exe 'VertigoUp n'
+    set number
+endfunction
+
+call arpeggio#load()
+exec "Arpeggio inoremap fu function ()<Left>"
+exec "Arpeggio inoremap {} {<CR>}<Up><End><CR>"
+exec "Arpeggio inoremap gm GL.global.messages"
+exec "Arpeggio inoremap rq GL.global.proxy.request({"
+exec "Arpeggio inoremap ml GL.global.router.modifyLocation({<CR>});<Up><End><CR>"
+exec "Arpeggio inoremap cp casper.then(function () {<CR>});<Up><End><CR>"
+exec "Arpeggio inoremap a' ä"
+exec "Arpeggio inoremap o' ö"
+exec "Arpeggio inoremap u' ü"
+exec "Arpeggio inoremap s' ß"
+
+nmap -  <Plug>(operator-replace)
+
+set makeprg=run-casper-test
+let g:tmux_session="casper"
+command! Casper execute ":Make " . expand("%:p")

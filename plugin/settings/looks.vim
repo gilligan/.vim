@@ -10,8 +10,8 @@ if has("gui")
         highlight Cursor guifg=white guibg=steelblue
         highlight iCursor guifg=white guibg=steelblue
     else
-        "set guifont=Inconsolata-dz\ for\ Powerline\ Medium\ 9
-        set guifont=ProggyCleanTT\ 12
+        set guifont=Inconsolata-dz\ for\ Powerline\ Medium\ 9
+        "set guifont=ProggyCleanTT\ 12
     endif
 else
     let g:Powerline_symbols = 'compatible'
