@@ -60,13 +60,12 @@ Bundle 'Lokaltog/vim-easymotion'
 "
 " searching, matching, marks
 "
-Bundle 'dahu/vim-fanfingtastic'
 Bundle 'vim-scripts/matchit.zip'
 Bundle 'mbriggs/mark.vim'
-Bundle 'goldfeld/vim-seek'
 Bundle 'gcmt/psearch.vim'
 Bundle 'Valloric/MatchTagAlways'
 Bundle 'gcmt/breeze.vim'
+Bundle 'justinmk/vim-sneak'
 
 "
 " haskell
