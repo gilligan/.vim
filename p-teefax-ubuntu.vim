@@ -24,13 +24,13 @@ nnoremap <silent> <Space>k :call WrapVertigoUp()<CR>
 function! WrapVertigoDown()
     set relativenumber
     exe 'VertigoDown n'
-    set number
+    set relativenumber!
 endfunction
 
 function! WrapVertigoUp()
     set relativenumber
     exe 'VertigoUp n'
-    set number
+    set relativenumber!
 endfunction
 
 call arpeggio#load()
