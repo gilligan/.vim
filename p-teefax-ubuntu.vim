@@ -16,6 +16,7 @@ let g:movealong_default_keys = 1
 
 Bundle 'prendradjaja/vim-vertigo'
 Bundle 'kana/vim-arpeggio'
+"Bundle 'https://github.com/suan/vim-instant-markdown.git'
 
 nnoremap <silent> <Space>j :call WrapVertigoDown()<CR>
 nnoremap <silent> <Space>k :call WrapVertigoUp()<CR>

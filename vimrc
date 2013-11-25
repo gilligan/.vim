@@ -21,6 +21,7 @@ Bundle 'tpope/vim-eunuch'
 Bundle 'tpope/vim-dispatch'
 Bundle 'tpope/vim-obsession'
 Bundle 'tpope/vim-repeat'
+Bundle 'tpope/vim-markdown'
 
 "
 " code completion
