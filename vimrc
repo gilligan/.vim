@@ -21,6 +21,7 @@ Bundle 'tpope/vim-eunuch'
 Bundle 'tpope/vim-dispatch'
 Bundle 'tpope/vim-obsession'
 Bundle 'tpope/vim-repeat'
+Bundle 'tpope/vim-markdown'
 
 "
 " code completion
@@ -55,18 +56,18 @@ Bundle 'gilligan/textobj-lastpaste'
 Bundle 'bkad/CamelCaseMotion'
 Bundle 'michaeljsmith/vim-indent-object'
 Bundle 'terryma/vim-expand-region'
-Bundle 'Lokaltog/vim-easymotion'
+Bundle 'liujoey/vim-easymotion'
+"Bundle 'Lokaltog/vim-easymotion'
 
 "
 " searching, matching, marks
 "
-Bundle 'dahu/vim-fanfingtastic'
 Bundle 'vim-scripts/matchit.zip'
 Bundle 'mbriggs/mark.vim'
-Bundle 'goldfeld/vim-seek'
 Bundle 'gcmt/psearch.vim'
 Bundle 'Valloric/MatchTagAlways'
 Bundle 'gcmt/breeze.vim'
+Bundle 'justinmk/vim-sneak'
 
 "
 " haskell
@@ -116,7 +117,9 @@ Bundle 'regedarek/ZoomWin'
 Bundle 'jeetsukumaran/vim-buffergator'
 Bundle 'Valloric/ListToggle'
 Bundle 'scrooloose/nerdcommenter'
-Bundle 'scrooloose/nerdtree'
+"Bundle 'scrooloose/nerdtree'
+Bundle 'Shougo/unite.vim'
+Bundle 'Shougo/vimfiler'
 
 "
 " misc plugins
