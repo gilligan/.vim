@@ -71,12 +71,10 @@ Bundle 'gcmt/breeze.vim'
 "
 " haskell
 "
-Bundle 'vim-scripts/indenthaskell.vim'
-Bundle 'vim-scripts/Superior-Haskell-Interaction-Mode-SHIM'
 Bundle 'dag/vim2hs'
 Bundle 'eagletmt/ghcmod-vim'
 Bundle 'ujihisa/neco-ghc'
-Bundle 'lukerandall/haskellmode-vim'
+Bundle 'https://github.com/adinapoli/cumino.git'
 
 "
 " LISP
@@ -130,6 +128,8 @@ Bundle 'current-func-info.vim'
 Bundle 'vim-scripts/SingleCompile'
 Bundle 'majutsushi/tagbar'
 Bundle 'scrooloose/syntastic'
+Bundle 'junegunn/vim-easy-align'
+Bundle 'https://github.com/tommcdo/vim-lion.git'
 
 colo lucius
 filetype plugin indent on

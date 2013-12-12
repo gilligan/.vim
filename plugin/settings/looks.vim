@@ -22,6 +22,6 @@ endif
 "
 " show whitespace characters in gui
 "
-if has ('gui_running')
-    set listchars=tab:▸\ ,eol:¬,extends:❯,precedes:❮
-endif
+"if has ('gui_running')
+"    set listchars=tab:▸\ ,eol:¬,extends:❯,precedes:❮
+"endif

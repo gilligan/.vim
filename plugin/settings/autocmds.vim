@@ -2,7 +2,6 @@
 " Show trailing whitespaces
 "
 highlight ExtraWhitespace ctermbg=red guibg=red
-match ExtraWhitespace /\s\+$/
 autocmd BufWinEnter javascript match ExtraWhitespace /\s\+$/
 autocmd InsertEnter javascript match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd InsertLeave javascript match ExtraWhitespace /\s\+$/
