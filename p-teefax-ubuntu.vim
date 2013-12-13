@@ -17,6 +17,7 @@ let g:movealong_default_keys = 1
 Bundle 'prendradjaja/vim-vertigo'
 Bundle 'kana/vim-arpeggio'
 "Bundle 'https://github.com/suan/vim-instant-markdown.git'
+Bundle 'tommcdo/vim-exchange'
 
 nnoremap <silent> <Space>j :call WrapVertigoDown()<CR>
 nnoremap <silent> <Space>k :call WrapVertigoUp()<CR>
@@ -45,6 +46,8 @@ exec "Arpeggio inoremap a' ä"
 exec "Arpeggio inoremap o' ö"
 exec "Arpeggio inoremap u' ü"
 exec "Arpeggio inoremap s' ß"
+
+let g:sneak#streak = 1
 
 nmap -  <Plug>(operator-replace)
 
