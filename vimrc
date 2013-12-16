@@ -1,5 +1,6 @@
 set nocompatible
 filetype off
+let g:vundle_default_git_proto = 'git'
 set rtp+=~/.vim/bundle/vundle
 call vundle#rc()
 
