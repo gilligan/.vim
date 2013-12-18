@@ -75,5 +75,9 @@ nnoremap <silent> <Right> <C-w>><C-w>>
 " replace word under cursor
 nnoremap <Leader>s :%s/\<<C-r><C-w>\>/
 
+" move to line start & line end
+nmap <C-a> 0
+nmap <C-e> $
+
 " general mappings }}}
 
