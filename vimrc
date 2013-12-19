@@ -61,7 +61,6 @@ Bundle 'bkad/CamelCaseMotion'
 Bundle 'michaeljsmith/vim-indent-object'
 Bundle 'terryma/vim-expand-region'
 Bundle 'liujoey/vim-easymotion'
-"Bundle 'Lokaltog/vim-easymotion'
 
 "
 " searching, matching, marks
@@ -121,9 +120,8 @@ Bundle 'regedarek/ZoomWin'
 Bundle 'jeetsukumaran/vim-buffergator'
 Bundle 'Valloric/ListToggle'
 Bundle 'scrooloose/nerdcommenter'
-"Bundle 'scrooloose/nerdtree'
+Bundle 'scrooloose/nerdtree'
 Bundle 'Shougo/unite.vim'
-Bundle 'Shougo/vimfiler'
 
 "
 " misc plugins
