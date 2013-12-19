@@ -19,8 +19,8 @@ Bundle 'kana/vim-arpeggio'
 "Bundle 'https://github.com/suan/vim-instant-markdown.git'
 Bundle 'tommcdo/vim-exchange'
 
-nnoremap <silent> <Space>j :call WrapVertigoDown()<CR>
-nnoremap <silent> <Space>k :call WrapVertigoUp()<CR>
+"nnoremap <silent> <Space>j :call WrapVertigoDown()<CR>
+"nnoremap <silent> <Space>k :call WrapVertigoUp()<CR>
 
 
 function! WrapVertigoDown()
