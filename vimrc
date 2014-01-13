@@ -12,6 +12,7 @@ let mapleader = "\<Space>"
 "
 
 Bundle 'gmarik/vundle'
+Bundle 'godlygeek/tabular'
 
 "
 " tpope plugins
@@ -61,6 +62,7 @@ Bundle 'bkad/CamelCaseMotion'
 Bundle 'michaeljsmith/vim-indent-object'
 Bundle 'terryma/vim-expand-region'
 Bundle 'liujoey/vim-easymotion'
+Bundle 't9md/vim-choosewin'
 
 "
 " searching, matching, marks
