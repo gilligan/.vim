@@ -51,6 +51,13 @@ let g:sneak#streak = 1
 
 nmap -  <Plug>(operator-replace)
 
-set makeprg=run-casper-test
 let g:tmux_session="casper"
 command! Casper execute ":Make " . expand("%:p")
+
+let g:ctrlp_buftag_types = {
+            \ 'javascript' : {
+            \ 'bin': '/home/tpflug/.bin/tagsjs',
+            \ 'args': '',
+            \ },
+            \ }
+
