@@ -132,7 +132,7 @@ Bundle 'vim-scripts/UnconditionalPaste'
 Bundle 'gilligan/vim-wai'
 Bundle 'current-func-info.vim'
 Bundle 'vim-scripts/SingleCompile'
-Bundle 'majutsushi/tagbar'
+"Bundle 'majutsushi/tagbar'
 Bundle 'scrooloose/syntastic'
 Bundle 'https://github.com/tommcdo/vim-lion.git'
 
