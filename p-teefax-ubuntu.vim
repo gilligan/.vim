@@ -18,6 +18,7 @@ Bundle 'prendradjaja/vim-vertigo'
 Bundle 'kana/vim-arpeggio'
 "Bundle 'https://github.com/suan/vim-instant-markdown.git'
 Bundle 'tommcdo/vim-exchange'
+Bundle 'jayflo/vim-skip'
 
 "nnoremap <silent> <Space>j :call WrapVertigoDown()<CR>
 "nnoremap <silent> <Space>k :call WrapVertigoUp()<CR>
@@ -60,4 +61,3 @@ let g:ctrlp_buftag_types = {
             \ 'args': '',
             \ },
             \ }
-
