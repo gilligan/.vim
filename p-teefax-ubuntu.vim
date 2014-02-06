@@ -18,6 +18,7 @@ Bundle 'prendradjaja/vim-vertigo'
 Bundle 'kana/vim-arpeggio'
 "Bundle 'https://github.com/suan/vim-instant-markdown.git'
 Bundle 'tommcdo/vim-exchange'
+Bundle 'jayflo/vim-skip'
 
 "nnoremap <silent> <Space>j :call WrapVertigoDown()<CR>
 "nnoremap <silent> <Space>k :call WrapVertigoUp()<CR>
@@ -51,6 +52,12 @@ let g:sneak#streak = 1
 
 nmap -  <Plug>(operator-replace)
 
-set makeprg=run-casper-test
 let g:tmux_session="casper"
 command! Casper execute ":Make " . expand("%:p")
+
+let g:ctrlp_buftag_types = {
+            \ 'javascript' : {
+            \ 'bin': '/home/tpflug/.bin/tagsjs',
+            \ 'args': '',
+            \ },
+            \ }
