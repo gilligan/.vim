@@ -61,3 +61,8 @@ let g:ctrlp_buftag_types = {
             \ 'args': '',
             \ },
             \ }
+
+command! JSBeauty execute ":call ReplaceBeautified()"
+function! ReplaceBeautified()
+    exe "% !js-beautify -f -"
+endfunction
