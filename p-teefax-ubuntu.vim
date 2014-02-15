@@ -14,12 +14,6 @@ iabbr <silent> __s ß<C-R>=Eatchar('\s')<CR>
 
 let g:movealong_default_keys = 1
 
-Bundle 'prendradjaja/vim-vertigo'
-Bundle 'kana/vim-arpeggio'
-"Bundle 'https://github.com/suan/vim-instant-markdown.git'
-Bundle 'tommcdo/vim-exchange'
-Bundle 'jayflo/vim-skip'
-
 "nnoremap <silent> <Space>j :call WrapVertigoDown()<CR>
 "nnoremap <silent> <Space>k :call WrapVertigoUp()<CR>
 

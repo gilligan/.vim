@@ -61,7 +61,6 @@ Bundle 'gilligan/textobj-lastpaste'
 Bundle 'bkad/CamelCaseMotion'
 Bundle 'michaeljsmith/vim-indent-object'
 Bundle 'terryma/vim-expand-region'
-Bundle 'liujoey/vim-easymotion'
 Bundle 't9md/vim-choosewin'
 
 "
@@ -133,10 +132,19 @@ Bundle 'vim-scripts/UnconditionalPaste'
 Bundle 'gilligan/vim-wai'
 Bundle 'current-func-info.vim'
 Bundle 'vim-scripts/SingleCompile'
-"Bundle 'majutsushi/tagbar'
 Bundle 'scrooloose/syntastic'
 
-colo lucius
+"
+" load host specific bundles
+"
+exe 'source ~/.vim/bundles.' . hostname() . '.vim'
+
+"
+" end of bundle configurations
+"
+
+set background=dark
+colo molokai
 filetype plugin indent on
 
 "
@@ -149,7 +157,7 @@ endfor
 "
 " load local overrides
 "
-let local_config = glob('~/.vim/')  . hostname() . '.vim'
+let local_config = '~/.vim/'  . hostname() . '.vim'
 if filereadable(local_config)
     exe 'source ' . local_config
 endif
