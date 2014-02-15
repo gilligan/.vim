@@ -16,7 +16,7 @@ set tabstop=4        " tab = 4 spaces
 set shiftwidth=4     " shift by 4 spaces
 set softtabstop=4    " tab equals 4 spaces
 set laststatus=2     " always show status
-set background=light " light background color
+set background=dark " light background color
 set incsearch        " search incrementally
 set grepprg=grep\ -nH\ $* " print filename for match
 set backspace=indent,eol,start " make backspace behave
