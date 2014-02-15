@@ -62,13 +62,13 @@ Bundle 'bkad/CamelCaseMotion'
 Bundle 'michaeljsmith/vim-indent-object'
 Bundle 'terryma/vim-expand-region'
 Bundle 't9md/vim-choosewin'
+Bundle 'kana/vim-arpeggio'
 
 "
 " searching, matching, marks
 "
 Bundle 'vim-scripts/matchit.zip'
 Bundle 'mbriggs/mark.vim'
-Bundle 'gcmt/psearch.vim'
 Bundle 'Valloric/MatchTagAlways'
 Bundle 'gcmt/breeze.vim'
 Bundle 'justinmk/vim-sneak'
@@ -133,6 +133,8 @@ Bundle 'gilligan/vim-wai'
 Bundle 'current-func-info.vim'
 Bundle 'vim-scripts/SingleCompile'
 Bundle 'scrooloose/syntastic'
+Bundle 'itchyny/thumbnail.vim'
+Bundle 'gerw/vim-HiLinkTrace'
 
 "
 " load host specific bundles

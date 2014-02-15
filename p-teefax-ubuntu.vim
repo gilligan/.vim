@@ -12,23 +12,6 @@ iabbr <silent> __o ö<C-R>=Eatchar('\s')<CR>
 iabbr <silent> __u ü<C-R>=Eatchar('\s')<CR>
 iabbr <silent> __s ß<C-R>=Eatchar('\s')<CR>
 
-let g:movealong_default_keys = 1
-
-"nnoremap <silent> <Space>j :call WrapVertigoDown()<CR>
-"nnoremap <silent> <Space>k :call WrapVertigoUp()<CR>
-
-
-function! WrapVertigoDown()
-    set relativenumber
-    exe 'VertigoDown n'
-    set relativenumber!
-endfunction
-
-function! WrapVertigoUp()
-    set relativenumber
-    exe 'VertigoUp n'
-    set relativenumber!
-endfunction
 
 call arpeggio#load()
 exec "Arpeggio inoremap fu function ()<Left>"
