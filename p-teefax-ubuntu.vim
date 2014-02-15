@@ -60,3 +60,6 @@ command! JSBeauty execute ":call ReplaceBeautified()"
 function! ReplaceBeautified()
     exe "% !js-beautify -f -"
 endfunction
+
+
+let g:teefax_settings_loaded = 1

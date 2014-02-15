@@ -157,7 +157,5 @@ endfor
 "
 " load local overrides
 "
-let local_config = '~/.vim/'  . hostname() . '.vim'
-if filereadable(local_config)
-    exe 'source ' . local_config
-endif
+exe 'source ~/.vim/' . hostname() . '.vim'
+

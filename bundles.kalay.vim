@@ -14,5 +14,5 @@ Bundle 'bruno-/vim-vertical-move'
 Bundle 't9md/vim-textmanip'
 Bundle 'itchyny/thumbnail.vim'
 
-let g:kalay_settings_loaded = 1
+let g:kalay_bundles_loaded = 1
 

@@ -4,4 +4,4 @@ Bundle 'kana/vim-arpeggio'
 Bundle 'tommcdo/vim-exchange'
 Bundle 'jayflo/vim-skip'
 
-
+let g:teefax_bundles_loaded = 1
