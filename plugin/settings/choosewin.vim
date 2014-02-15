@@ -1,2 +1,2 @@
 " invoke chooser via <Leader>-
-nmap - <Plug>(choosewin)
+nmap <leader>w <Plug>(choosewin)
