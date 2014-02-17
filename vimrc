@@ -63,6 +63,8 @@ Bundle 'michaeljsmith/vim-indent-object'
 Bundle 'terryma/vim-expand-region'
 Bundle 't9md/vim-choosewin'
 Bundle 'kana/vim-arpeggio'
+Bundle 'bruno-/vim-vertical-move'
+Bundle 'gcmt/wildfire.vim'
 
 "
 " searching, matching, marks
@@ -117,7 +119,6 @@ Bundle 'mhinz/vim-signify'
 " buffers & window manipulation
 "
 Bundle 'kien/ctrlp.vim'
-Bundle 'regedarek/ZoomWin'
 Bundle 'jeetsukumaran/vim-buffergator'
 Bundle 'Valloric/ListToggle'
 Bundle 'scrooloose/nerdcommenter'
