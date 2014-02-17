@@ -37,5 +37,7 @@ nnoremap <silent> <Down> <C-w>-<C-w>-
 nnoremap <silent> <Left> <C-w><<C-w><
 nnoremap <silent> <Right> <C-w>><C-w>>
 
+nnoremap <leader><CR> :NERDTreeToggle<CR>
+
 " general mappings }}}
 
