@@ -146,6 +146,7 @@ exe 'source ~/.vim/bundles.' . hostname() . '.vim'
 "
 
 set background=dark
+set t_Co=256
 colo molokai
 filetype plugin indent on
 
