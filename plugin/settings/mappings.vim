@@ -12,8 +12,8 @@ nmap <F10> :SCCompileRun<cr>
 map <C-\> :CtrlPBufTag<cr>
 
 " go to start/end of line
-map <C-E> <C-O>$
-map <C-A> <C-O>0
+imap <C-E> <C-O>$
+imap <C-A> <C-O>^
 
 " use arrow keys for window navigation
 map <C-Up>   <C-W>k<C-W>_
