@@ -6,7 +6,6 @@ call vundle#rc()
 
 nnoremap <Space> <Nop>
 let mapleader = "\<Space>"
-
 "
 " bundles
 "
@@ -33,7 +32,7 @@ Bundle 'tpope/vim-markdown'
 "
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'SirVer/ultisnips'
-
+Bundle 'honza/vim-snippets'
 "
 " javascript & web
 "
@@ -136,6 +135,9 @@ Bundle 'vim-scripts/SingleCompile'
 Bundle 'scrooloose/syntastic'
 Bundle 'itchyny/thumbnail.vim'
 Bundle 'gerw/vim-HiLinkTrace'
+
+Bundle 'gilligan/vim-snesdev'
+Bundle 'gilligan/vim-lldb'
 
 "
 " load host specific bundles
