@@ -9,7 +9,10 @@ map <F3> :TagbarToggle<CR>
 map <F4> :ConqueTermSplit bash<CR>
 nmap <F9> :SCCompile<cr>
 nmap <F10> :SCCompileRun<cr>
+
+" ctrlp mappings
 map <C-\> :CtrlPBufTag<cr>
+map <C-t> :CtrlPTag<cr>
 
 " go to start/end of line
 imap <C-E> <C-O>$
