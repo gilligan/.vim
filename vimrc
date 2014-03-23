@@ -1,8 +1,10 @@
-set nocompatible
-filetype off
-let g:vundle_default_git_proto = 'git'
-set rtp+=~/.vim/bundle/vundle
-call vundle#rc()
+if has('vim_starting')
+    set nocompatible
+    set runtimepath+=~/.vim/bundle/neobundle.vim/
+endif
+
+call neobundle#rc(expand('~/.vim/bundle'))
+NeoBundleFetch 'Shougo/neobundle.vim'
 
 nnoremap <Space> <Nop>
 let mapleader = "\<Space>"
@@ -10,134 +12,133 @@ let mapleader = "\<Space>"
 " bundles
 "
 
-Bundle 'gmarik/vundle'
-Bundle 'godlygeek/tabular'
+NeoBundle 'godlygeek/tabular'
 
 "
 " tpope plugins
 "
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-surround'
-Bundle 'tpope/vim-unimpaired'
-Bundle 'tpope/vim-haml'
-Bundle 'tpope/vim-endwise'
-Bundle 'tpope/vim-eunuch'
-Bundle 'tpope/vim-dispatch'
-Bundle 'tpope/vim-obsession'
-Bundle 'tpope/vim-repeat'
-Bundle 'tpope/vim-markdown'
+NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'tpope/vim-surround'
+NeoBundle 'tpope/vim-unimpaired'
+NeoBundle 'tpope/vim-haml'
+NeoBundle 'tpope/vim-endwise'
+NeoBundle 'tpope/vim-eunuch'
+NeoBundle 'tpope/vim-dispatch'
+NeoBundle 'tpope/vim-obsession'
+NeoBundle 'tpope/vim-repeat'
+NeoBundle 'tpope/vim-markdown'
 
 "
 " code completion
 "
-Bundle 'Valloric/YouCompleteMe'
-Bundle 'SirVer/ultisnips'
-Bundle 'honza/vim-snippets'
+NeoBundle 'Valloric/YouCompleteMe', {'build': {'mac': './install.sh'}}
+NeoBundle 'SirVer/ultisnips'
+NeoBundle 'honza/vim-snippets'
 "
 " javascript & web
 "
-Bundle 'othree/html5.vim'
-Bundle 'juvenn/mustache.vim'
-Bundle 'pangloss/vim-javascript'
-Bundle 'vim-scripts/loremipsum'
-Bundle 'heavenshell/vim-jsdoc'
-Bundle 'mattn/emmet-vim'
-Bundle 'Rykka/colorv.vim'
-Bundle 'marijnh/tern_for_vim'
+NeoBundle 'othree/html5.vim'
+NeoBundle 'juvenn/mustache.vim'
+NeoBundle 'pangloss/vim-javascript'
+NeoBundle 'vim-scripts/loremipsum'
+NeoBundle 'heavenshell/vim-jsdoc'
+NeoBundle 'mattn/emmet-vim'
+NeoBundle 'Rykka/colorv.vim'
+NeoBundle 'marijnh/tern_for_vim'
 
 "
 " text objects & motions
 "
-Bundle 'vim-scripts/textobj-user'
-Bundle 'vim-scripts/textobj-entire'
-Bundle 'vim-scripts/textobj-line'
-Bundle 'kana/vim-textobj-lastpat'
-Bundle 'kana/vim-textobj-diff'
-Bundle 'kana/vim-textobj-syntax'
-Bundle 'vim-scripts/argtextobj.vim'
-Bundle 'thinca/vim-textobj-comment'
-Bundle 'gilligan/textobj-lastpaste'
-Bundle 'bkad/CamelCaseMotion'
-Bundle 'michaeljsmith/vim-indent-object'
-Bundle 'terryma/vim-expand-region'
-Bundle 't9md/vim-choosewin'
-Bundle 'kana/vim-arpeggio'
-Bundle 'bruno-/vim-vertical-move'
-Bundle 'gcmt/wildfire.vim'
+NeoBundle 'vim-scripts/textobj-user'
+NeoBundle 'vim-scripts/textobj-entire'
+NeoBundle 'vim-scripts/textobj-line'
+NeoBundle 'kana/vim-textobj-lastpat'
+NeoBundle 'kana/vim-textobj-diff'
+NeoBundle 'kana/vim-textobj-syntax'
+NeoBundle 'vim-scripts/argtextobj.vim'
+NeoBundle 'thinca/vim-textobj-comment'
+NeoBundle 'gilligan/textobj-lastpaste'
+NeoBundle 'bkad/CamelCaseMotion'
+NeoBundle 'michaeljsmith/vim-indent-object'
+NeoBundle 'terryma/vim-expand-region'
+NeoBundle 't9md/vim-choosewin'
+NeoBundle 'kana/vim-arpeggio'
+NeoBundle 'bruno-/vim-vertical-move'
+NeoBundle 'gcmt/wildfire.vim'
 
 "
 " searching, matching, marks
 "
-Bundle 'vim-scripts/matchit.zip'
-Bundle 'mbriggs/mark.vim'
-Bundle 'Valloric/MatchTagAlways'
-Bundle 'gcmt/breeze.vim'
-Bundle 'justinmk/vim-sneak'
+NeoBundle 'vim-scripts/matchit.zip'
+NeoBundle 'mbriggs/mark.vim'
+NeoBundle 'Valloric/MatchTagAlways'
+NeoBundle 'gcmt/breeze.vim'
+NeoBundle 'justinmk/vim-sneak'
 
 "
 " haskell
 "
-Bundle 'dag/vim2hs'
-Bundle 'eagletmt/ghcmod-vim'
-Bundle 'ujihisa/neco-ghc'
-Bundle 'https://github.com/adinapoli/cumino.git'
+NeoBundle 'dag/vim2hs'
+NeoBundle 'eagletmt/ghcmod-vim'
+NeoBundle 'ujihisa/neco-ghc'
+NeoBundle 'https://github.com/adinapoli/cumino.git'
 
 "
 " LISP
 "
-Bundle 'vim-scripts/slimv.vim'
+NeoBundle 'vim-scripts/slimv.vim'
 
 "
 " themes / file type plugins
 "
-Bundle 'bling/vim-airline'
-Bundle 'tomasr/molokai.git'
-Bundle 'vim-scripts/EditPlus'
-Bundle 'helino/vim-json.git'
-Bundle 'Lucius'
+NeoBundle 'bling/vim-airline'
+NeoBundle 'tomasr/molokai.git'
+NeoBundle 'vim-scripts/EditPlus'
+NeoBundle 'helino/vim-json.git'
+NeoBundle 'Lucius'
+NeoBundle 'morhetz/gruvbox.git'
 
 "
 " shell & interaction
 "
-Bundle 'Shougo/vimproc'
-Bundle 'Shougo/vimshell.git'
-Bundle 'benmills/vimux.git'
-Bundle 'Conque-Shell'
-Bundle 'tarruda/vim-conque-repl'
-Bundle 'sjl/clam.vim.git'
+NeoBundle 'Shougo/vimproc',  {'build': {'mac': 'g:make'}}
+NeoBundle 'Shougo/vimshell.git'
+NeoBundle 'benmills/vimux.git'
+NeoBundle 'Conque-Shell'
+NeoBundle 'tarruda/vim-conque-repl'
+NeoBundle 'sjl/clam.vim.git'
 
 "
 " source control & diffing
 "
-Bundle 'sjl/splice.vim.git'
-Bundle 'gregsexton/gitv.git'
-Bundle 'http://www.tidraso.co.uk/repository/vim-plugin/'
-Bundle 'mhinz/vim-signify'
+NeoBundle 'sjl/splice.vim.git'
+NeoBundle 'gregsexton/gitv.git'
+NeoBundle 'mhinz/vim-signify'
 
 "
 " buffers & window manipulation
 "
-Bundle 'kien/ctrlp.vim'
-Bundle 'jeetsukumaran/vim-buffergator'
-Bundle 'Valloric/ListToggle'
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'scrooloose/nerdtree'
-Bundle 'Shougo/unite.vim'
+NeoBundle 'kien/ctrlp.vim'
+NeoBundle 'jeetsukumaran/vim-buffergator'
+NeoBundle 'Valloric/ListToggle'
+NeoBundle 'scrooloose/nerdcommenter'
+NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'Shougo/unite.vim'
 
 "
 " misc plugins
 "
-Bundle 'vim-scripts/Decho.git'
-Bundle 'vim-scripts/UnconditionalPaste'
-Bundle 'gilligan/vim-wai'
-Bundle 'current-func-info.vim'
-Bundle 'vim-scripts/SingleCompile'
-Bundle 'scrooloose/syntastic'
-Bundle 'itchyny/thumbnail.vim'
-Bundle 'gerw/vim-HiLinkTrace'
+NeoBundle 'vim-scripts/Decho.git'
+NeoBundle 'vim-scripts/UnconditionalPaste'
+NeoBundle 'gilligan/vim-wai'
+NeoBundle 'current-func-info.vim'
+NeoBundle 'vim-scripts/SingleCompile'
+NeoBundle 'scrooloose/syntastic'
+NeoBundle 'itchyny/thumbnail.vim'
+NeoBundle 'gerw/vim-HiLinkTrace'
 
-Bundle 'gilligan/vim-snesdev'
-Bundle 'gilligan/vim-lldb'
+NeoBundle 'gilligan/vim-snesdev'
+NeoBundle 'gilligan/vim-lldb'
 
 "
 " load host specific bundles
@@ -148,10 +149,12 @@ exe 'source ~/.vim/bundles.' . hostname() . '.vim'
 " end of bundle configurations
 "
 
+filetype plugin indent on
+NeoBundleCheck
+
 set background=dark
 set t_Co=256
 colo molokai
-filetype plugin indent on
 
 "
 " load all plugin settings from separate files
