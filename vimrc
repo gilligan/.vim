@@ -37,14 +37,14 @@ NeoBundle 'honza/vim-snippets'
 "
 " javascript & web
 "
-NeoBundle 'othree/html5.vim'
-NeoBundle 'juvenn/mustache.vim'
-NeoBundle 'pangloss/vim-javascript'
+NeoBundle 'pangloss/vim-javascript', {'lazy': 1, 'autoload': ['javascript']}
+NeoBundle 'heavenshell/vim-jsdoc', {'lazy': 1, 'autoload': ['javascript']}
+NeoBundle 'marijnh/tern_for_vim', {'lazy': 1, 'autoload': ['javascript']}
+NeoBundle 'juvenn/mustache.vim', {'lazy': 1, 'autoload': ['mustache']}
+NeoBundle 'othree/html5.vim', {'lazy': 1, 'autoload': ['html']}
+NeoBundle 'mattn/emmet-vim', {'lazy': 1, 'autoload': ['html', 'javascript']}
 NeoBundle 'vim-scripts/loremipsum'
-NeoBundle 'heavenshell/vim-jsdoc'
-NeoBundle 'mattn/emmet-vim'
 NeoBundle 'Rykka/colorv.vim'
-NeoBundle 'marijnh/tern_for_vim'
 
 "
 " text objects & motions
@@ -72,21 +72,21 @@ NeoBundle 'gcmt/wildfire.vim'
 NeoBundle 'vim-scripts/matchit.zip'
 NeoBundle 'mbriggs/mark.vim'
 NeoBundle 'Valloric/MatchTagAlways'
-NeoBundle 'gcmt/breeze.vim'
+NeoBundle 'gcmt/breeze.vim', {'lazy': 1, 'autoload': ['html']}
 NeoBundle 'justinmk/vim-sneak'
 
 "
 " haskell
 "
-NeoBundle 'dag/vim2hs'
-NeoBundle 'eagletmt/ghcmod-vim'
-NeoBundle 'ujihisa/neco-ghc'
-NeoBundle 'https://github.com/adinapoli/cumino.git'
+NeoBundle 'dag/vim2hs', {'lazy': 1, 'autoload': ['haskell']}
+NeoBundle 'eagletmt/ghcmod-vim', {'lazy': 1, 'autoload': ['haskell']}
+NeoBundle 'ujihisa/neco-ghc', {'lazy': 1, 'autoload': ['haskell']}
+NeoBundle 'https://github.com/adinapoli/cumino.git', {'lazy': 1, 'autoload': ['haskell']}
 
 "
 " LISP
 "
-NeoBundle 'vim-scripts/slimv.vim'
+NeoBundle 'vim-scripts/slimv.vim', {'lazy': 1, 'autoload': ['lisp']}
 
 "
 " themes / file type plugins
