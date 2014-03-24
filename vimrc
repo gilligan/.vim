@@ -137,7 +137,6 @@ Bundle 'itchyny/thumbnail.vim'
 Bundle 'gerw/vim-HiLinkTrace'
 
 Bundle 'gilligan/vim-snesdev'
-Bundle 'gilligan/vim-lldb'
 
 "
 " load host specific bundles
