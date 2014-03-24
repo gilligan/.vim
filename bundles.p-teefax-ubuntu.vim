@@ -1,5 +1,5 @@
 "Bundle 'https://github.com/suan/vim-instant-markdown.git'
-Bundle 'tommcdo/vim-exchange'
-Bundle 'jayflo/vim-skip'
+NeoBundle 'tommcdo/vim-exchange'
+NeoBundle 'jayflo/vim-skip'
 
 let g:teefax_bundles_loaded = 1
