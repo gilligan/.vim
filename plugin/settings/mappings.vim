@@ -40,6 +40,8 @@ nnoremap <silent> <Down> <C-w>-<C-w>-
 nnoremap <silent> <Left> <C-w><<C-w><
 nnoremap <silent> <Right> <C-w>><C-w>>
 
+nnoremap <silent> <C-W>z :wincmd z<Bar>cclose<Bar>lclose<CR>
+
 "
 " home row leader key mappings
 "
