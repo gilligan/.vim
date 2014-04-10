@@ -26,6 +26,7 @@ Bundle 'tpope/vim-dispatch'
 Bundle 'tpope/vim-obsession'
 Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-markdown'
+Bundle 'tpope/vim-commentary'
 
 "
 " code completion
@@ -120,7 +121,7 @@ Bundle 'mhinz/vim-signify'
 Bundle 'kien/ctrlp.vim'
 Bundle 'jeetsukumaran/vim-buffergator'
 Bundle 'Valloric/ListToggle'
-Bundle 'scrooloose/nerdcommenter'
+"Bundle 'scrooloose/nerdcommenter'
 Bundle 'scrooloose/nerdtree'
 Bundle 'Shougo/unite.vim'
 
