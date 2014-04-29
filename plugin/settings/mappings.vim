@@ -46,6 +46,9 @@ nnoremap <silent> <Right> <C-w>><C-w>>
 
 nnoremap <silent> <C-W>z :wincmd z<Bar>cclose<Bar>lclose<CR>
 
+" copy selected text to command line
+vnoremap : y:<C-r>"<C-b>
+
 "
 " home row leader key mappings
 "
