@@ -121,9 +121,9 @@ Bundle 'mhinz/vim-signify'
 Bundle 'kien/ctrlp.vim'
 Bundle 'jeetsukumaran/vim-buffergator'
 Bundle 'Valloric/ListToggle'
-"Bundle 'scrooloose/nerdcommenter'
 Bundle 'scrooloose/nerdtree'
 Bundle 'Shougo/unite.vim'
+Bundle 'majutsushi/tagbar'
 
 "
 " misc plugins
