@@ -44,7 +44,34 @@ nnoremap <silent> <Down> <C-w>-<C-w>-
 nnoremap <silent> <Left> <C-w><<C-w><
 nnoremap <silent> <Right> <C-w>><C-w>>
 
+nnoremap <silent> <C-W>z :wincmd z<Bar>cclose<Bar>lclose<CR>
+
+" copy selected text to command line
+vnoremap : y:<C-r>"<C-b>
+
+"
+" home row leader key mappings
+"
 nnoremap <leader><CR> :NERDTreeToggle<CR>
+nnoremap <leader>a %
+" nnoremap <leader>s <Plug>SlimeParagraphSend()
+" nnoremap <leader>d YCM           <-- get rid of this
+" nnoremap <leader>f %             <-- SPACE FOR RENT
+" nnoremap <leader>g Signify       <-- get rid of this
+" nnoremap <leader>hlt HiLinkTrace <-- get rid of this
+" nnoremap <leader>j               <-- SPACE FOR RENT
+" nnoremap <leader>k               <-- SPACE FOR RENT
+" nnoremap <leader>l  ListToggle
+" nnoremap <leader>;               <-- SPACE FOR RENT
+" nnoremap <leader>'               <-- SPACE FOR RENT
+
+"
+" non-home row leader mappings
+"
+
+" visual select last paste (textobj-lastpate)
+nnoremap <leader>p vip
+
 
 " general mappings }}}
 
