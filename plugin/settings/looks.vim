@@ -19,6 +19,9 @@ else
     let NERDTreeDirArrows=0
 endif
 
+let g:molokai_original = 1
+set showtabline=0
+
 "
 " show whitespace characters in gui
 "
