@@ -69,3 +69,8 @@ autocmd FileType haskell setlocal conceallevel=0
 autocmd FileType haskell compiler hlint
 
 nnoremap <leader>= :execute "Tabularize haskell_bindings"<CR>
+nnoremap <leader>ht :execute "GhcModType!"<CR>
+nnoremap <leader>hT :execute "GhcModTypeInsert!"<CR>
+nnoremap <leader>hc :execute "GhcModTypeClear"<CR>
+nnoremap <leader>hi :execute "GhcModInfoPreview!"<CR>
+nnoremap <leader>hh :execute "HoogleClose"<CR>
