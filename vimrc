@@ -81,8 +81,8 @@ Bundle 'wellle/targets.vim'
 Bundle 'dag/vim2hs'
 Bundle 'eagletmt/ghcmod-vim'
 Bundle 'ujihisa/neco-ghc'
-Bundle 'https://github.com/adinapoli/cumino.git'
-Bundle 'dkasak/haskellFoldIndent'
+"Bundle 'https://github.com/adinapoli/cumino.git'
+Bundle 'travitch/hasksyn.git'
 Bundle 'Twinside/vim-hoogle'
 
 "
@@ -133,12 +133,9 @@ Bundle 'Majutsushi/tagbar'
 "
 Bundle 'vim-scripts/Decho.git'
 Bundle 'vim-scripts/UnconditionalPaste'
-Bundle 'gilligan/vim-wai'
 Bundle 'current-func-info.vim'
 Bundle 'vim-scripts/SingleCompile'
 Bundle 'scrooloose/syntastic'
-Bundle 'itchyny/thumbnail.vim'
-Bundle 'gerw/vim-HiLinkTrace'
 
 Bundle 'gilligan/vim-snesdev'
 
