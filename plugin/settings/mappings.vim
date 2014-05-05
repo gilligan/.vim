@@ -44,10 +44,13 @@ nnoremap <silent> <Down> <C-w>-<C-w>-
 nnoremap <silent> <Left> <C-w><<C-w><
 nnoremap <silent> <Right> <C-w>><C-w>>
 
+" close quickfix/location list
 nnoremap <silent> <C-W>z :wincmd z<Bar>cclose<Bar>lclose<CR>
+" toggle tabs
+nnoremap <C-w><space> gt
 
 " copy selected text to command line
-vnoremap : y:<C-r>"<C-b>
+vnoremap ; y:<C-r>"<C-b>
 
 "
 " home row leader key mappings
