@@ -26,7 +26,6 @@ Bundle 'tpope/vim-dispatch'
 Bundle 'tpope/vim-obsession'
 Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-markdown'
-Bundle 'tpope/vim-commentary'
 
 "
 " code completion
@@ -74,6 +73,7 @@ Bundle 'mbriggs/mark.vim'
 Bundle 'Valloric/MatchTagAlways'
 Bundle 'gcmt/breeze.vim'
 Bundle 'justinmk/vim-sneak'
+Bundle 'wellle/targets.vim'
 
 "
 " haskell
@@ -82,6 +82,8 @@ Bundle 'dag/vim2hs'
 Bundle 'eagletmt/ghcmod-vim'
 Bundle 'ujihisa/neco-ghc'
 Bundle 'https://github.com/adinapoli/cumino.git'
+Bundle 'dkasak/haskellFoldIndent'
+Bundle 'Twinside/vim-hoogle'
 
 "
 " LISP
@@ -121,9 +123,10 @@ Bundle 'mhinz/vim-signify'
 Bundle 'kien/ctrlp.vim'
 Bundle 'jeetsukumaran/vim-buffergator'
 Bundle 'Valloric/ListToggle'
+Bundle 'scrooloose/nerdcommenter'
 Bundle 'scrooloose/nerdtree'
 Bundle 'Shougo/unite.vim'
-Bundle 'majutsushi/tagbar'
+Bundle 'Majutsushi/tagbar'
 
 "
 " misc plugins
