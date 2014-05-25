@@ -56,7 +56,7 @@ nnoremap <leader><CR> :NERDTreeToggle<CR>
 nnoremap <leader>a %
 " nnoremap <leader>s <Plug>SlimeParagraphSend()
 " nnoremap <leader>d YCM           <-- get rid of this
-" nnoremap <leader>f %             <-- SPACE FOR RENT
+nnoremap <leader>f :Unite -start-insert file_rec/async<CR>
 " nnoremap <leader>g Signify       <-- get rid of this
 " nnoremap <leader>hlt HiLinkTrace <-- get rid of this
 " nnoremap <leader>j               <-- SPACE FOR RENT
