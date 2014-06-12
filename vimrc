@@ -122,7 +122,6 @@ Bundle 'mhinz/vim-signify'
 " buffers & window manipulation
 "
 Bundle 'kien/ctrlp.vim'
-Bundle 'jeetsukumaran/vim-buffergator'
 Bundle 'Valloric/ListToggle'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'scrooloose/nerdtree'

@@ -37,7 +37,7 @@ set wildignore+=*.so,*.swp,*.zip " ignore patterns for completion
 set nohidden
 set autochdir         " change directory to current file working dir
 let g:rct_completion_use_fri = 1
-set clipboard=unnamed " clipboard = unnamed reg for easy interaction
+"set clipboard=unnamed " clipboard = unnamed reg for easy interaction
 set noerrorbells visualbell t_vb=
 autocmd GUIEnter * set visualbell t_vb=
 let &shellpipe='&>'
