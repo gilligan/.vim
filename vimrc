@@ -81,9 +81,10 @@ Bundle 'wellle/targets.vim'
 Bundle 'dag/vim2hs'
 Bundle 'eagletmt/ghcmod-vim'
 Bundle 'ujihisa/neco-ghc'
-"Bundle 'https://github.com/adinapoli/cumino.git'
 Bundle 'travitch/hasksyn.git'
 Bundle 'Twinside/vim-hoogle'
+Bundle 'carlohamalainen/ghcimportedfrom-vim'
+Bundle 'ujihisa/unite-haskellimport'
 
 "
 " LISP
@@ -126,6 +127,7 @@ Bundle 'Valloric/ListToggle'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'scrooloose/nerdtree'
 Bundle 'Shougo/unite.vim'
+Bundle 'Shougo/unite-outline'
 Bundle 'Majutsushi/tagbar'
 
 "

@@ -63,6 +63,11 @@ let g:ctrlp_buftag_types = {
     \ },
   \ }
 
+"
+" configuration for syntastic
+"
+let g:syntastic_haskell_checkers = ['ghc_mod', 'hlint']
+
 autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
 autocmd FileType haskell setlocal nofoldenable
 autocmd FileType haskell setlocal conceallevel=0
