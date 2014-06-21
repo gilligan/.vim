@@ -60,18 +60,14 @@ Bundle 'gilligan/textobj-lastpaste'
 Bundle 'bkad/CamelCaseMotion'
 Bundle 'michaeljsmith/vim-indent-object'
 Bundle 'terryma/vim-expand-region'
-Bundle 't9md/vim-choosewin'
 Bundle 'kana/vim-arpeggio'
 Bundle 'bruno-/vim-vertical-move'
-Bundle 'gcmt/wildfire.vim'
 
 "
 " searching, matching, marks
 "
 Bundle 'vim-scripts/matchit.zip'
 Bundle 'mbriggs/mark.vim'
-Bundle 'Valloric/MatchTagAlways'
-Bundle 'gcmt/breeze.vim'
 Bundle 'justinmk/vim-sneak'
 Bundle 'wellle/targets.vim'
 
@@ -85,11 +81,6 @@ Bundle 'travitch/hasksyn.git'
 Bundle 'Twinside/vim-hoogle'
 Bundle 'carlohamalainen/ghcimportedfrom-vim'
 Bundle 'ujihisa/unite-haskellimport'
-
-"
-" LISP
-"
-Bundle 'vim-scripts/slimv.vim'
 
 "
 " themes / file type plugins
@@ -106,16 +97,13 @@ Bundle 'Lucius'
 Bundle 'Shougo/vimproc'
 Bundle 'Shougo/vimshell.git'
 Bundle 'benmills/vimux.git'
-Bundle 'Conque-Shell'
-Bundle 'tarruda/vim-conque-repl'
 Bundle 'sjl/clam.vim.git'
-
+Bundle 'christoomey/vim-tmux-navigator'
 "
 " source control & diffing
 "
 Bundle 'sjl/splice.vim.git'
 Bundle 'gregsexton/gitv.git'
-Bundle 'http://www.tidraso.co.uk/repository/vim-plugin/'
 Bundle 'mhinz/vim-signify'
 
 "
@@ -132,13 +120,10 @@ Bundle 'Majutsushi/tagbar'
 "
 " misc plugins
 "
-Bundle 'vim-scripts/Decho.git'
 Bundle 'vim-scripts/UnconditionalPaste'
 Bundle 'current-func-info.vim'
-Bundle 'vim-scripts/SingleCompile'
 Bundle 'scrooloose/syntastic'
-
-Bundle 'gilligan/vim-snesdev'
+Bundle 'KabbAmine/zeavim.vim'
 
 "
 " load host specific bundles
