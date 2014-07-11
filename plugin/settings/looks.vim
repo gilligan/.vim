@@ -10,7 +10,7 @@ if has("gui")
         highlight Cursor guifg=white guibg=steelblue
         highlight iCursor guifg=white guibg=steelblue
     else
-        set guifont=Inconsolata-dz\ for\ Powerline\ Medium\ 9
+        set guifont=Inconsolata\ Medium\ 10
         "set guifont=ProggyCleanTT\ 12
     endif
 else

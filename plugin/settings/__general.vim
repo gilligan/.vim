@@ -7,7 +7,7 @@ set ignorecase       " ignore case in searches
 set smartcase        " smarter ignorecase
 set ruler            " show ruler
 set cursorline       " higlight cursor line
-set tags=./tags;     " look for tags in current dir and up
+set tags=tags;/,codex.tags;/ " look for tags in current dir and up and
 set nu               " show line numbers
 set cmdheight=1      " cmd line is 1 lines high
 set wmh=0            " minimal window height is 0
@@ -35,7 +35,6 @@ set nobackup         " no useless backup files
 set noswapfile       " no useless swap files
 set wildignore+=*.so,*.swp,*.zip " ignore patterns for completion
 set nohidden
-set autochdir         " change directory to current file working dir
 let g:rct_completion_use_fri = 1
 "set clipboard=unnamed " clipboard = unnamed reg for easy interaction
 set noerrorbells visualbell t_vb=

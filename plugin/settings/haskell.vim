@@ -73,9 +73,18 @@ autocmd FileType haskell setlocal nofoldenable
 autocmd FileType haskell setlocal conceallevel=0
 autocmd FileType haskell compiler hlint
 
-nnoremap <leader>= :execute "Tabularize haskell_bindings"<CR>
+
+function! GhciReload()
+    call VimuxSendText(":r")
+    call VimuxSendKeys("Enter")
+endfunction
+
+nnoremap <leader>h= :execute "Tabularize haskell_bindings"<CR>
 nnoremap <leader>ht :execute "GhcModType!"<CR>
 nnoremap <leader>hT :execute "GhcModTypeInsert!"<CR>
 nnoremap <leader>hc :execute "GhcModTypeClear"<CR>
 nnoremap <leader>hi :execute "GhcModInfoPreview!"<CR>
-nnoremap <leader>hh :execute "HoogleClose"<CR>
+nnoremap <leader>hh :execute "GhcImportedFromOpenHaddock"<CR>
+nnoremap <leader>hI :execute "Unite -start-insert haskellimport"<CR>
+nnoremap <leader>hr :call GhciReload()<CR>
+nnoremap <leader>hs :execute "Unite hoogle"<CR>
