@@ -2,6 +2,7 @@ set nocompatible
 filetype off
 let g:vundle_default_git_proto = 'git'
 set rtp+=~/.vim/bundle/vundle
+set rtp+=~/.fzf
 call vundle#rc()
 
 nnoremap <Space> <Nop>
@@ -42,7 +43,6 @@ Bundle 'pangloss/vim-javascript'
 Bundle 'vim-scripts/loremipsum'
 Bundle 'heavenshell/vim-jsdoc'
 Bundle 'mattn/emmet-vim'
-Bundle 'Rykka/colorv.vim'
 Bundle 'marijnh/tern_for_vim'
 
 "
@@ -81,7 +81,7 @@ Bundle 'travitch/hasksyn.git'
 Bundle 'Twinside/vim-hoogle'
 Bundle 'carlohamalainen/ghcimportedfrom-vim'
 Bundle 'ujihisa/unite-haskellimport'
-
+Bundle 'eagletmt/unite-haddock'
 "
 " themes / file type plugins
 "
@@ -90,6 +90,7 @@ Bundle 'tomasr/molokai.git'
 Bundle 'vim-scripts/EditPlus'
 Bundle 'helino/vim-json.git'
 Bundle 'Lucius'
+Bundle 'altercation/vim-colors-solarized'
 
 "
 " shell & interaction
@@ -105,6 +106,7 @@ Bundle 'christoomey/vim-tmux-navigator'
 Bundle 'sjl/splice.vim.git'
 Bundle 'gregsexton/gitv.git'
 Bundle 'mhinz/vim-signify'
+Bundle 'AndrewRadev/gapply.vim'
 
 "
 " buffers & window manipulation
@@ -124,7 +126,7 @@ Bundle 'vim-scripts/UnconditionalPaste'
 Bundle 'current-func-info.vim'
 Bundle 'scrooloose/syntastic'
 Bundle 'KabbAmine/zeavim.vim'
-
+Bundle 'dbakker/vim-projectroot'
 "
 " load host specific bundles
 "
@@ -139,6 +141,8 @@ set t_Co=256
 colo molokai
 filetype plugin indent on
 
+call unite#custom_default_action('haddock', 'browse_remote')
+
 "
 " load all plugin settings from separate files
 "
@@ -150,4 +154,19 @@ endfor
 " load local overrides
 "
 exe 'source ~/.vim/' . hostname() . '.vim'
+
+let g:solarized_termtrans=1
+let g:solarized_degrade=0
+let g:solarized_bold=1
+let g:solarized_underline=1
+let g:solarized_italic=1
+let g:solarized_termcolors=256
+let g:solarized_contrast="high"
+let g:solarized_visibility="high"
+let g:solarized_diffmode="normal"
+let g:solarized_hitrail=0
+let g:solarized_menu=0
+
+let g:molokai_original = 1
+let g:rehash256 = 1
 
