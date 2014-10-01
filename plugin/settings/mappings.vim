@@ -33,10 +33,6 @@ map ,l [I:let nr = input("select: ")<Bar>exe "normal " . nr ."[\t"<CR>
 " list occurences count of word under cursor
 map ,L :execute ":%s@\\<" . expand("<cword>") . "\\>\@&@gn"<CR>
 
-" commenting with vim-commentary
-nnoremap <leader>c gcc
-vnoremap <leader>c gc
-
 
 " use arrow keys for window manipulation
 nnoremap <silent> <Up> <C-w>+<C-w>+
