@@ -3,7 +3,7 @@ filetype off
 let g:vundle_default_git_proto = 'git'
 set rtp+=~/.vim/bundle/vundle
 set rtp+=~/.fzf
-call vundle#rc()
+call vundle#begin()
 
 nnoremap <Space> <Nop>
 let mapleader = "\<Space>"
@@ -11,124 +11,123 @@ let mapleader = "\<Space>"
 " bundles
 "
 
-Bundle 'gmarik/vundle'
-Bundle 'godlygeek/tabular'
+Plugin 'gmarik/vundle'
+Plugin 'godlygeek/tabular'
 
 "
 " tpope plugins
 "
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-surround'
-Bundle 'tpope/vim-unimpaired'
-Bundle 'tpope/vim-haml'
-Bundle 'tpope/vim-endwise'
-Bundle 'tpope/vim-eunuch'
-Bundle 'tpope/vim-dispatch'
-Bundle 'tpope/vim-obsession'
-Bundle 'tpope/vim-repeat'
-Bundle 'tpope/vim-markdown'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-unimpaired'
+Plugin 'tpope/vim-haml'
+Plugin 'tpope/vim-endwise'
+Plugin 'tpope/vim-eunuch'
+Plugin 'tpope/vim-dispatch'
+Plugin 'tpope/vim-obsession'
+Plugin 'tpope/vim-repeat'
+Plugin 'tpope/vim-markdown'
 
 "
 " code completion
 "
-Bundle 'Valloric/YouCompleteMe'
-Bundle 'SirVer/ultisnips'
-Bundle 'honza/vim-snippets'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
 "
 " javascript & web
 "
-Bundle 'othree/html5.vim'
-Bundle 'juvenn/mustache.vim'
-Bundle 'pangloss/vim-javascript'
-Bundle 'vim-scripts/loremipsum'
-Bundle 'heavenshell/vim-jsdoc'
-Bundle 'mattn/emmet-vim'
-Bundle 'marijnh/tern_for_vim'
+Plugin 'othree/html5.vim'
+Plugin 'juvenn/mustache.vim'
+Plugin 'pangloss/vim-javascript'
+Plugin 'vim-scripts/loremipsum'
+Plugin 'heavenshell/vim-jsdoc'
+Plugin 'mattn/emmet-vim'
+Plugin 'marijnh/tern_for_vim'
 
 "
 " text objects & motions
 "
-Bundle 'vim-scripts/textobj-user'
-Bundle 'vim-scripts/textobj-entire'
-Bundle 'vim-scripts/textobj-line'
-Bundle 'kana/vim-textobj-lastpat'
-Bundle 'kana/vim-textobj-diff'
-Bundle 'kana/vim-textobj-syntax'
-Bundle 'vim-scripts/argtextobj.vim'
-Bundle 'thinca/vim-textobj-comment'
-Bundle 'gilligan/textobj-lastpaste'
-Bundle 'bkad/CamelCaseMotion'
-Bundle 'michaeljsmith/vim-indent-object'
-Bundle 'terryma/vim-expand-region'
-Bundle 'kana/vim-arpeggio'
-Bundle 'bruno-/vim-vertical-move'
-
-"Bundle "file:///home/gilligan/.vim/bundle/vim-textobj-haskell"
-Bundle "gilligan/vim-textobj-haskell"
+Plugin 'vim-scripts/textobj-user'
+Plugin 'vim-scripts/textobj-entire'
+Plugin 'vim-scripts/textobj-line'
+Plugin 'kana/vim-textobj-lastpat'
+Plugin 'kana/vim-textobj-diff'
+Plugin 'kana/vim-textobj-syntax'
+Plugin 'vim-scripts/argtextobj.vim'
+Plugin 'thinca/vim-textobj-comment'
+Plugin 'gilligan/textobj-lastpaste'
+Plugin 'bkad/CamelCaseMotion'
+Plugin 'michaeljsmith/vim-indent-object'
+Plugin 'terryma/vim-expand-region'
+Plugin 'kana/vim-arpeggio'
+Plugin 'bruno-/vim-vertical-move'
+Plugin 'gilligan/vim-textobj-haskell'
 
 "
 " searching, matching, marks
 "
-Bundle 'vim-scripts/matchit.zip'
-Bundle 'mbriggs/mark.vim'
-Bundle 'justinmk/vim-sneak'
-Bundle 'wellle/targets.vim'
+Plugin 'vim-scripts/matchit.zip'
+Plugin 'mbriggs/mark.vim'
+Plugin 'justinmk/vim-sneak'
+Plugin 'wellle/targets.vim'
+Plugin 'haya14busa/incsearch.vim'
 
 "
 " haskell
 "
-Bundle 'dag/vim2hs'
-Bundle 'eagletmt/ghcmod-vim'
-Bundle 'ujihisa/neco-ghc'
-Bundle 'travitch/hasksyn.git'
-Bundle 'Twinside/vim-hoogle'
-Bundle 'carlohamalainen/ghcimportedfrom-vim'
-Bundle 'ujihisa/unite-haskellimport'
-Bundle 'eagletmt/unite-haddock'
+Plugin 'dag/vim2hs'
+Plugin 'eagletmt/ghcmod-vim'
+Plugin 'ujihisa/neco-ghc'
+Plugin 'travitch/hasksyn.git'
+Plugin 'Twinside/vim-hoogle'
+Plugin 'carlohamalainen/ghcimportedfrom-vim'
+Plugin 'ujihisa/unite-haskellimport'
+Plugin 'eagletmt/unite-haddock'
 "
 " themes / file type plugins
 "
-Bundle 'bling/vim-airline'
-Bundle 'tomasr/molokai.git'
-Bundle 'vim-scripts/EditPlus'
-Bundle 'helino/vim-json.git'
-Bundle 'Lucius'
+Plugin 'bling/vim-airline'
+Plugin 'tomasr/molokai.git'
+Plugin 'vim-scripts/EditPlus'
+Plugin 'helino/vim-json.git'
+Plugin 'Lucius'
 
 "
 " shell & interaction
 "
-Bundle 'Shougo/vimproc'
-Bundle 'Shougo/vimshell.git'
-Bundle 'benmills/vimux.git'
-Bundle 'sjl/clam.vim.git'
-Bundle 'christoomey/vim-tmux-navigator'
+Plugin 'Shougo/vimproc'
+Plugin 'Shougo/vimshell.git'
+Plugin 'benmills/vimux.git'
+Plugin 'sjl/clam.vim.git'
+Plugin 'christoomey/vim-tmux-navigator'
 "
 " source control & diffing
 "
-Bundle 'sjl/splice.vim.git'
-Bundle 'gregsexton/gitv.git'
-Bundle 'mhinz/vim-signify'
-Bundle 'AndrewRadev/gapply.vim'
+Plugin 'sjl/splice.vim.git'
+Plugin 'gregsexton/gitv.git'
+Plugin 'mhinz/vim-signify'
+Plugin 'AndrewRadev/gapply.vim'
 
 "
 " buffers & window manipulation
 "
-Bundle 'kien/ctrlp.vim'
-Bundle 'Valloric/ListToggle'
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'scrooloose/nerdtree'
-Bundle 'Shougo/unite.vim'
-Bundle 'Shougo/unite-outline'
-Bundle 'Majutsushi/tagbar'
+Plugin 'kien/ctrlp.vim'
+Plugin 'Valloric/ListToggle'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'scrooloose/nerdtree'
+Plugin 'Shougo/unite.vim'
+Plugin 'Shougo/unite-outline'
+Plugin 'Majutsushi/tagbar'
 
 "
 " misc plugins
 "
-Bundle 'vim-scripts/UnconditionalPaste'
-Bundle 'current-func-info.vim'
-Bundle 'scrooloose/syntastic'
-Bundle 'KabbAmine/zeavim.vim'
-Bundle 'dbakker/vim-projectroot'
+Plugin 'vim-scripts/UnconditionalPaste'
+Plugin 'current-func-info.vim'
+Plugin 'scrooloose/syntastic'
+Plugin 'KabbAmine/zeavim.vim'
+Plugin 'dbakker/vim-projectroot'
 "
 " load host specific bundles
 "
@@ -140,9 +139,10 @@ exe 'source ~/.vim/bundles.' . hostname() . '.vim'
 
 set background=dark
 set t_Co=256
-colo molokai
 filetype plugin indent on
+call vundle#end()
 
+colo molokai
 call unite#custom_default_action('haddock', 'browse_remote')
 
 "
