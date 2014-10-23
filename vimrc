@@ -63,6 +63,9 @@ Bundle 'terryma/vim-expand-region'
 Bundle 'kana/vim-arpeggio'
 Bundle 'bruno-/vim-vertical-move'
 
+"Bundle "file:///home/gilligan/.vim/bundle/vim-textobj-haskell"
+Bundle "gilligan/vim-textobj-haskell"
+
 "
 " searching, matching, marks
 "
@@ -90,7 +93,6 @@ Bundle 'tomasr/molokai.git'
 Bundle 'vim-scripts/EditPlus'
 Bundle 'helino/vim-json.git'
 Bundle 'Lucius'
-Bundle 'altercation/vim-colors-solarized'
 
 "
 " shell & interaction
