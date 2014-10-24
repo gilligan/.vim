@@ -88,3 +88,4 @@ nnoremap <leader>hh :execute "GhcImportedFromOpenHaddock"<CR>
 nnoremap <leader>hI :execute "Unite -start-insert haskellimport"<CR>
 nnoremap <leader>hr :call GhciReload()<CR>
 nnoremap <leader>hs :execute "Unite hoogle"<CR>
+nnoremap <leader>hb k0yiWjpA
