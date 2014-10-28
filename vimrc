@@ -137,10 +137,12 @@ exe 'source ~/.vim/bundles.' . hostname() . '.vim'
 " end of bundle configurations
 "
 
+
 set background=dark
 set t_Co=256
 filetype plugin indent on
 call vundle#end()
+
 
 colo molokai
 call unite#custom_default_action('haddock', 'browse_remote')
@@ -152,22 +154,11 @@ for f in split(glob('~/.vim/plugin/settings/*.vim'), '\n')
     exe 'source' f
 endfor
 
+
 "
 " load local overrides
 "
 exe 'source ~/.vim/' . hostname() . '.vim'
-
-let g:solarized_termtrans=1
-let g:solarized_degrade=0
-let g:solarized_bold=1
-let g:solarized_underline=1
-let g:solarized_italic=1
-let g:solarized_termcolors=256
-let g:solarized_contrast="high"
-let g:solarized_visibility="high"
-let g:solarized_diffmode="normal"
-let g:solarized_hitrail=0
-let g:solarized_menu=0
 
 let g:molokai_original = 1
 let g:rehash256 = 1

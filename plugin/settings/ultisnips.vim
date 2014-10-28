@@ -1,3 +1,4 @@
 let g:UltiSnipsSnippetsDir = "~/.vim/UltiSnips"
-let g:UltiSnipsExpandTrigger    = '<S-F12>'
-let g:UltiSnipsJumpForwardTrigger   = '<S-F12>'
+let g:UltiSnipsExpandTrigger    = '<C-k>'
+let g:UltiSnipsJumpForwardTrigger   = '<C-k>'
+let g:UltiSnipsJumpBackwardTrigger = '<C-j>'

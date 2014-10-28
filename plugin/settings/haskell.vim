@@ -64,6 +64,22 @@ let g:ctrlp_buftag_types = {
   \ }
 
 "
+" arpeggio mappings for ultisnips
+"
+
+call arpeggio#load()
+Arpeggio inoremap <Space>i if<Space><Esc>:call UltiSnips#ExpandSnippet()<CR>
+Arpeggio inoremap <Space>c case<Space><Esc>:call UltiSnips#ExpandSnippet()<CR>
+Arpeggio inoremap <Space>; ::<Space><Esc>:call UltiSnips#ExpandSnippet()<CR>
+Arpeggio inoremap <Space>d def<Space><Esc>:call UltiSnips#ExpandSnippet()<CR>
+Arpeggio inoremap <Space>f =<Space><Esc>:call UltiSnips#ExpandSnippet()<CR>
+Arpeggio inoremap <Space>g \|<Space><Esc>:call UltiSnips#ExpandSnippet()<CR>
+Arpeggio inoremap <Space>l \<Space><Esc>:call UltiSnips#ExpandSnippet()<CR>
+
+
+
+
+"
 " configuration for syntastic
 "
 let g:syntastic_haskell_checkers = ['ghc_mod', 'hlint']
