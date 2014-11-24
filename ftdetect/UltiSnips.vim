@@ -1,0 +1,1 @@
+/home/gilligan/.vim/bundle/ultisnips/ftdetect/UltiSnips.vim
