@@ -62,7 +62,6 @@ Plugin 'michaeljsmith/vim-indent-object'
 Plugin 'terryma/vim-expand-region'
 Plugin 'kana/vim-arpeggio'
 Plugin 'bruno-/vim-vertical-move'
-Plugin 'gilligan/vim-textobj-haskell'
 
 "
 " searching, matching, marks
@@ -128,6 +127,7 @@ Plugin 'current-func-info.vim'
 Plugin 'scrooloose/syntastic'
 Plugin 'KabbAmine/zeavim.vim'
 Plugin 'dbakker/vim-projectroot'
+Plugin 'badwolf'
 "
 " load host specific bundles
 "
