@@ -3,6 +3,7 @@ filetype off
 let g:vundle_default_git_proto = 'git'
 set rtp+=~/.vim/bundle/vundle
 set rtp+=~/.fzf
+
 call vundle#begin()
 
 nnoremap <Space> <Nop>
@@ -31,6 +32,7 @@ Plugin 'tpope/vim-markdown'
 "
 " code completion
 "
+Bundle 'ervandew/supertab'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
@@ -83,11 +85,19 @@ Plugin 'Twinside/vim-hoogle'
 Plugin 'carlohamalainen/ghcimportedfrom-vim'
 Plugin 'ujihisa/unite-haskellimport'
 Plugin 'eagletmt/unite-haddock'
+"Plugin 'thinca/vim-quickrun'
+"Plugin 'osyo-manga/shabadou.vim'
+"Plugin 'dannyob/quickfixstatus'
+"Plugin 'osyo-manga/vim-watchdogs'
+"Plugin 'jceb/vim-hier'
+"Plugin 'tomtom/quickfixsigns_vim'
+
 "
 " themes / file type plugins
 "
 Plugin 'bling/vim-airline'
 Plugin 'tomasr/molokai.git'
+Plugin 'fmoralesc/molokayo'
 Plugin 'vim-scripts/EditPlus'
 Plugin 'helino/vim-json.git'
 Plugin 'Lucius'
@@ -126,8 +136,14 @@ Plugin 'vim-scripts/UnconditionalPaste'
 Plugin 'current-func-info.vim'
 Plugin 'scrooloose/syntastic'
 Plugin 'KabbAmine/zeavim.vim'
-Plugin 'dbakker/vim-projectroot'
+Plugin 'airblade/vim-rooter'
 Plugin 'badwolf'
+Plugin 'thinca/vim-prettyprint'
+Plugin 'itchyny/calendar.vim'
+
+let g:calendar_google_calendar = 1
+let g:calendar_google_task = 1
+
 "
 " load host specific bundles
 "
@@ -138,13 +154,13 @@ exe 'source ~/.vim/bundles.' . hostname() . '.vim'
 "
 
 
+set timeoutlen=1000 ttimeoutlen=0
 set background=dark
 set t_Co=256
 filetype plugin indent on
 call vundle#end()
 
 
-colo molokai
 call unite#custom_default_action('haddock', 'browse_remote')
 
 "

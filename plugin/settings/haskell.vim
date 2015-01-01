@@ -21,6 +21,11 @@ let g:haskell_hsp           = 0
 let g:haskell_no_indent     = 1
 
 "
+" configuration for necoghc
+"
+let g:necoghc_enable_detailed_browse = 1
+
+"
 " configuration for tagbar
 "
 if executable('lushtags')
@@ -77,6 +82,8 @@ Arpeggio inoremap <Space>g \|<Space><Esc>:call UltiSnips#ExpandSnippet()<CR>
 Arpeggio inoremap <Space>l \<Space><Esc>:call UltiSnips#ExpandSnippet()<CR>
 
 
+" fix highlightning of functions
+set iskeyword+='
 
 
 "
