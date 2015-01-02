@@ -60,10 +60,7 @@ Plugin 'vim-scripts/argtextobj.vim'
 Plugin 'thinca/vim-textobj-comment'
 Plugin 'gilligan/textobj-lastpaste'
 Plugin 'bkad/CamelCaseMotion'
-Plugin 'michaeljsmith/vim-indent-object'
-Plugin 'terryma/vim-expand-region'
 Plugin 'kana/vim-arpeggio'
-Plugin 'bruno-/vim-vertical-move'
 
 "
 " searching, matching, marks
