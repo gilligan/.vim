@@ -25,6 +25,12 @@ let g:haskell_no_indent     = 1
 "
 let g:necoghc_enable_detailed_browse = 1
 
+
+"
+" configuration for ghcimportedfrom-vim
+"
+let g:ghcimportedfrom_browser = '/usr/bin/chromium-browser'
+
 "
 " configuration for tagbar
 "
