@@ -21,6 +21,12 @@ let g:haskell_hsp           = 0
 let g:haskell_no_indent     = 1
 
 "
+" haskell-vim settings
+"
+let g:haskell_enable_pattern_synonyms = 1
+let g:haskell_enable_typeroles = 1
+
+"
 " configuration for necoghc
 "
 let g:necoghc_enable_detailed_browse = 1
@@ -91,6 +97,12 @@ Arpeggio inoremap <Space>l \<Space><Esc>:call UltiSnips#ExpandSnippet()<CR>
 " fix highlightning of functions
 set iskeyword+='
 
+" set indentation style for hindent
+"let g:hindent_style = "johan-tibell"
+"let g:hindent_style = "chris-done"
+let g:hindent_style = "gibiansky"
+
+
 
 "
 " configuration for syntastic
@@ -111,10 +123,12 @@ endfunction
 nnoremap <leader>h= :execute "Tabularize haskell_bindings"<CR>
 nnoremap <leader>ht :execute "GhcModType!"<CR>
 nnoremap <leader>hT :execute "GhcModTypeInsert!"<CR>
+nnoremap <leader>hS :execute "GhcModSplitFunCase!"<CR>
 nnoremap <leader>hc :execute "GhcModTypeClear"<CR>
 nnoremap <leader>hi :execute "GhcModInfoPreview!"<CR>
 nnoremap <leader>hh :execute "GhcImportedFromOpenHaddock"<CR>
 nnoremap <leader>hI :execute "Unite -start-insert haskellimport"<CR>
 nnoremap <leader>hr :call GhciReload()<CR>
 nnoremap <leader>hs :execute "Unite hoogle"<CR>
+nmap     <leader>hf vihgq
 nnoremap <leader>hb k0yiWjpA

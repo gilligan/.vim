@@ -2,6 +2,7 @@ set nocompatible
 filetype off
 let g:vundle_default_git_proto = 'git'
 set rtp+=~/.vim/bundle/vundle
+set rtp+=~/Development/vim/haskell/vim-textobj-haskell
 set rtp+=~/.fzf
 
 call vundle#begin()
@@ -43,7 +44,8 @@ Plugin 'othree/html5.vim'
 Plugin 'juvenn/mustache.vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'vim-scripts/loremipsum'
-Plugin 'heavenshell/vim-jsdoc'
+"Plugin 'heavenshell/vim-jsdoc'
+Plugin 'kchmck/vim-coffee-script'
 Plugin 'mattn/emmet-vim'
 Plugin 'marijnh/tern_for_vim'
 
@@ -77,11 +79,12 @@ Plugin 'haya14busa/incsearch.vim'
 Plugin 'dag/vim2hs'
 Plugin 'eagletmt/ghcmod-vim'
 Plugin 'ujihisa/neco-ghc'
-Plugin 'travitch/hasksyn.git'
+"Plugin 'travitch/hasksyn.git'
 Plugin 'Twinside/vim-hoogle'
 Plugin 'carlohamalainen/ghcimportedfrom-vim'
 Plugin 'ujihisa/unite-haskellimport'
 Plugin 'eagletmt/unite-haddock'
+Plugin 'raichoo/haskell-vim'
 "Plugin 'thinca/vim-quickrun'
 "Plugin 'osyo-manga/shabadou.vim'
 "Plugin 'dannyob/quickfixstatus'
@@ -98,6 +101,7 @@ Plugin 'fmoralesc/molokayo'
 Plugin 'vim-scripts/EditPlus'
 Plugin 'helino/vim-json.git'
 Plugin 'Lucius'
+Plugin 'altercation/vim-colors-solarized'
 
 "
 " shell & interaction
